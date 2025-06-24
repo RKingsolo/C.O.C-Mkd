@@ -1,0 +1,67 @@
+`Church of Christ Makurdi - Website Admin Manual
+
+1. Introduction
+Welcome to your church website admin panel. This manual will guide you through the process of managing and updating your church website.
+
+2. Getting Started
+- To access the admin area, click the "Admin Login" button in the footer (visible only to logged-in admins)
+- Use the credentials provided to you by the website administrator
+- After login, you'll see the admin dashboard with various sections
+
+3. Managing Website Content
+3.1 Pages
+- Navigate to "Manage Pages" in the sidebar
+- Select the page you want to edit from the list
+- Make your changes in the editor
+- Click "Save Changes" when done
+
+3.2 Sermons
+- To add a new sermon, click "Add New Sermon"
+- Fill in all required details (title, preacher, date, etc.)
+- Upload audio file (MP3 format recommended)
+- Optionally upload sermon notes (PDF) and a thumbnail image
+- Click "Save Sermon"
+
+3.3 Events
+- To add an event, click "Add New Event"
+- Fill in event details including date, time, location, and description
+- Upload a featured image if available
+- Set registration options if needed
+- Save when complete
+
+4. Media Library
+- Upload all images, audio files, documents here
+- Organize files into categories for easy management
+- Replace files by uploading new versions with the same name
+
+5. User Management
+- Add new users and assign appropriate roles
+- Administrators have full access
+- Editors can manage content but not settings
+- Authors can only add/edit their own content
+
+6. Website Settings
+6.1 General Settings
+- Edit church name, address, contact info
+- Update logos and favicon
+- Modify service times
+
+6.2 Other Settings
+- Newsletter settings
+- Social media links
+- Analytics tracking
+
+7. Best Practices
+- Always preview changes before saving
+- Keep content updated regularly
+- Back up important data
+- Use strong passwords for admin accounts
+
+8. Troubleshooting
+- If you can't log in, use the password reset option
+- For technical issues, contact your web developer
+- Clear your browser cache if you see outdated content
+
+For additional support, please contact:
+support@churchofchristmakurdi.com
++234 123 456 7890`;

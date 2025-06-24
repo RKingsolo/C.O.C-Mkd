@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church of Christ - High Level Makurdi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/new.css">
+    <link rel="icon" href="/src/aaron-burden--uj3Y7r1BeM-unsplash.jpg">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Frontend User View -->
+    <div id="frontend-view">
+        <!-- Navigation Bar -->
+        <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <!-- Logo and Church Name -->
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-church text-2xl text-yellow-300"></i>
+                    <a href="#" class="text-xl font-bold hover:text-yellow-300 transition nav-link active" data-page="home">Church of Christ<br><span class="text-sm font-normal">High Level, Makurdi</span></a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6" id="main-menu">
+                    <a href="#" class="nav-link active" data-page="home">Home</a>
+                    <a href="#" class="nav-link" data-page="about">About Us</a>
+                    <a href="#" class="nav-link" data-page="beliefs">Our Beliefs</a>
+                    <a href="#" class="nav-link" data-page="ministries">Ministries</a>
+                    <a href="#" class="nav-link" data-page="sermons">Sermons</a>
+                    <a href="#" class="nav-link hidden" data-page="events">Events</a>
+                    <a href="#" class="nav-link" data-page="contact">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-blue-800" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link active" data-page="home">Home</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="about">About Us</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="beliefs">Our Beliefs</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="ministries">Ministries</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="sermons">Sermons</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="events">Events</a>
+                    <a href="#" class="block px-3 py-2 rounded-md nav-link" data-page="contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home-page" class="page-content">
+            <div class="relative h-[90vh] bg-cover bg-center flex items-center" style="background-image: url(/src/aaron-burden--uj3Y7r1BeM-unsplash.jpg);">
+                <div class="hero-overlay absolute inset-0"></div>
+                <div class="container mx-auto px-4 relative z-10 text-white text-center animate-slide-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Church of Christ</h1>
+                    <p class="text-xl md:text-2xl mb-8">No.5 Owerri Street, High Level Makurdi</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <a href="#" class="bg-transparent border-2 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center gap-2 nav-link" data-page="events"> 
+                            <i class="fas fa-calendar-alt"></i> Upcoming Events
+                        </a>
+                        <a href="#" class="bg-transparent hover:bg-blue-900 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300 flex items-center justify-center gap-2 nav-link active" data-page="sermons">
+                            <i class="fas fa-headphones" ></i> Listen to Sermons
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Info Section -->
+            <div class="bg-blue-800 text-white py-8">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex flex-col items-center text-center p-4">
+                            <i class="fas fa-clock text-4xl mb-3 text-yellow-300"></i>
+                            <h3 class="text-xl font-bold mb-2">Service Times</h3>
+                            <p class="text-blue-100">Sunday: 9:00am - 12:00pm</p>
+                            <p class="text-blue-100">Wednesday: 5:00pm - 6:00pm</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-4">
+                            <i class="fas fa-map-marker-alt text-4xl mb-3 text-yellow-300"></i>
+                            <h3 class="text-xl font-bold mb-2">Our Location</h3>
+                            <p class="text-blue-100">No.5 Owerri Street</p>
+                            <p class="text-blue-100">High Level, Makurdi, Benue State, Nigeria.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-4">
+                            <i class="fas fa-phone-alt text-4xl mb-3 text-yellow-300"></i>
+                            <h3 class="text-xl font-bold mb-2">Contact Us</h3>
+                            <p class="text-blue-100">Phone: +234 123 456 7890</p>
+                            <p class="text-blue-100">Email: info@churchofchristmakurdi.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Page (initially hidden) -->
+        <section id="about-page" class="page-content hidden py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">About Our Church</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800">Our History</h3>
+                        <p class="mb-4 text-gray-700">Founded in 1975, the Church of Christ at High Level Makurdi has been a beacon of hope and faith in our community for nearly five decades. We started as a small gathering of believers meeting in a rented space and have grown by God's grace to become one of the most vibrant congregations in the region.</p>
+                        <p class="text-gray-700">Our journey has been marked by faithful service, biblical teaching, and a commitment to spreading the Gospel in its purest form. We remain devoted to the restoration principles that characterized the early church.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1568257827861-1a47c64e1966?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Church History" class="w-full h-auto">
+                    </div>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-eye text-2xl mr-3 text-blue-700"></i>
+                            <h4 class="text-xl font-bold text-blue-800">Our Vision</h4>
+                        </div>
+                        <p class="text-gray-700">To be a Christ-centered community that transforms lives through the power of the Gospel, equipping believers to impact their world for God's kingdom.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bullseye text-2xl mr-3 text-blue-700"></i>
+                            <h4 class="text-xl font-bold text-blue-800">Our Mission</h4>
+                        </div>
+                        <p class="text-gray-700">To proclaim Jesus Christ through biblical teaching, authentic worship, compassionate service, and intentional discipleship that leads to spiritual growth.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-heart text-2xl mr-3 text-blue-700"></i>
+                            <h4 class="text-xl font-bold text-blue-800">Our Values</h4>
+                        </div>
+                        <p class="text-gray-700">Biblical Authority • Prayer • Discipleship • Community • Service • Evangelism • Unity in Christ • Transformation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Beliefs Page -->
+        <section id="beliefs-page" class="page-content hidden py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Core Beliefs</h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-bible mr-3 text-yellow-500"></i> The Bible
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe the Bible is the inspired Word of God, the only infallible rule of faith and practice for Christians. It is complete and sufficient for teaching, reproof, correction, and training in righteousness (2 Timothy 3:16-17).</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-cross mr-3 text-yellow-500"></i> Jesus Christ
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe in Jesus Christ as the Son of God, our only Savior and Lord. Through His death and resurrection, we have salvation and the promise of eternal life. He is the head of the church and our mediator with God (1 Timothy 2:5).</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-water mr-3 text-yellow-500"></i> Salvation & Baptism
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe salvation comes by grace through faith (Ephesians 2:8-9), expressed through repentance and baptism by immersion for the forgiveness of sins (Acts 2:38). Baptism is our response to God's grace, not a work of merit but an act of faith.</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-church mr-3 text-yellow-500"></i> The Church
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe the church is the body of Christ on earth, established by Jesus and built upon the confession that He is the Christ (Matthew 16:18). The church is autonomous in its governance, following the New Testament pattern for organization and worship.</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-bread-slice mr-3 text-yellow-500"></i> Communion
+                        </h3>
+                        <p class="text-gray-700 pl-10">We observe the Lord's Supper every first day of the week as a memorial of Christ's sacrifice (Acts 20:7). The bread represents His body, and the cup represents His blood shed for our redemption.</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-hand-holding-heart mr-3 text-yellow-500"></i> Christian Living
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe Christians are called to live holy lives, distinct from the world (Romans 12:1-2). This includes loving God with all our heart, soul, mind, and strength, and loving our neighbors as ourselves (Mark 12:30-31).</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center">
+                            <i class="fas fa-trumpet mr-3 text-yellow-500"></i> Christ's Return
+                        </h3>
+                        <p class="text-gray-700 pl-10">We believe in the personal, imminent return of Jesus Christ, who will judge the living and the dead (2 Timothy 4:1). He will receive believers unto Himself and establish His eternal kingdom (1 Thessalonians 4:16-17).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ministries Page -->
+        <section id="ministries-page" class="page-content hidden py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Ministries</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1466690672304-8146fe65ac58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Children's Ministry</h3>
+                            <p class="text-gray-700 mb-4">Our children's ministry provides age-appropriate biblical teaching and fun activities for kids from ages 2-12. We meet every Sunday during worship service.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>Ages 2-12</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>Sundays @ 9:00am</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Youth Ministry</h3>
+                            <p class="text-gray-700 mb-4">Engaging teens in Bible study, worship, and fellowship that meets them where they are and challenges them to grow in their faith.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>Ages 13-19</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>Sundays @ 9:00am</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Women's Fellowship</h3>
+                            <p class="text-gray-700 mb-4">A place for women to connect, grow spiritually, and support one another through Bible studies, prayer, and service opportunities.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>All Women</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>1st Saturday's @ 9:00am</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Men's Ministry</h3>
+                            <p class="text-gray-700 mb-4">Equipping men to be spiritual leaders in their homes, workplaces, and communities through fellowship and Bible-based teaching.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>All Men</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>Mondays @ 5:00pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1529309530599-5f00456d9d43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Praise & Worship</h3>
+                            <p class="text-gray-700 mb-4">Leading the congregation in heartfelt worship through songs and spiritual hymns to glorify God and edify the church.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>All Ages</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>Sunday's</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1601758261230-ac60b84e1171?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80');"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Outreach & Missions</h3>
+                            <p class="text-gray-700 mb-4">Sharing Christ's love locally and globally through evangelism, benevolence, and supporting missionaries around the world.</p>
+                            <div class="flex items-center text-sm text-blue-600">
+                                <i class="fas fa-user-friends mr-2"></i> <span>All Members</span>
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-2"></i> <span>Various Times</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <p class="text-lg text-gray-700 mb-6">Want to get involved in a ministry?</p>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center nav-link active" data-page="contact">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sermons Page -->
+        <section id="sermons-page" class="page-content hidden py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Recent Sermons</h2>
+                
+                <div class="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-6 px-4">
+                    <!-- Sermon Card 1 -->
+                    <div class="sermon-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1602002418671-b91e9afbc3e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Sermon Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                <a href="#" class="bg-white text-blue-800 rounded-full w-16 h-16 flex items-center justify-center hover:bg-blue-100 transition">
+                                    <i class="fas fa-play text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <span class="text-sm font-semibold text-blue-600">June 4, 2023</span>
+                                    <h3 class="text-xl font-bold text-blue-900 mt-1">Walking by Faith</h3>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">35 min</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">Bro.Emmanuel explores what it truly means to walk by faith in our daily lives from 2 Corinthians 5:7.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                        <i class="fas fa-download mr-1"></i> MP3
+                                    </button>
+                                    <a href="#" download="">
+                                        <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                        <i class="fas fa-file-pdf mr-1"></i> Notes
+                                        </button>
+                                    </a>
+                                </div>
+                                <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">More details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sermon Card 2 -->
+                    <div class="sermon-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Sermon Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                <a href="#" class="bg-white text-blue-800 rounded-full w-16 h-16 flex items-center justify-center hover:bg-blue-100 transition">
+                                    <i class="fas fa-play text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <span class="text-sm font-semibold text-blue-600">May 28, 2023</span>
+                                    <h3 class="text-xl font-bold text-blue-900 mt-1">The Power of Prayer</h3>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">42 min</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">Bro. Andrew Joseph teaches on how to develop a consistent and effective prayer life from James 5:13-18.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                        <i class="fas fa-download mr-1"></i> MP3
+                                    </button>
+                                    <a href="#" download="">
+                                        <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                            <i class="fas fa-file-pdf mr-1"></i> Notes
+                                        </button>
+                                    </a>
+                                </div>
+                                <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">More details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sermon Card 3 -->
+                    <div class="sermon-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Sermon Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                <a href="#" class="bg-white text-blue-800 rounded-full w-16 h-16 flex items-center justify-center hover:bg-blue-100 transition">
+                                    <i class="fas fa-play text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <span class="text-sm font-semibold text-blue-600">May 21, 2023</span>
+                                    <h3 class="text-xl font-bold text-blue-900 mt-1">Living in God's Grace</h3>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">38 min</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">Bro. Icha Innocent examines what it means to live under God's grace rather than by law from Romans 6:1-14.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                        <i class="fas fa-download mr-1"></i> MP3
+                                    </button>
+                                    <a href="/src/Documents/MANAGING HIGH EXPECTATIONS.docx" download="Living In God's Grace">
+                                        <button class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                        <i class="fas fa-file-pdf mr-1"></i> Notes
+                                        </button>
+                                    </a>
+                                </div>
+                                <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">More details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="#" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                        <i class="fas fa-list mr-2"></i> View All Sermons
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Page -->
+        <section id="events-page" class="page-content hidden py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Upcoming Events</h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <!-- Event 1 -->
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-blue-700 text-white p-6 flex flex-col items-center justify-center">
+                                <div class="text-4xl font-bold">15</div>
+                                <div class="text-xl font-semibold">June</div>
+                                <div class="text-lg mt-2">2023</div>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Vacation Bible School</h3>
+                                <div class="flex items-center text-gray-700 mb-3">
+                                    <i class="fas fa-clock mr-2"></i> <span>9:00 AM - 12:30 PM Daily</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-2"></i> <span>Church Auditorium</span>
+                                </div>
+                                <p class="text-gray-700 mb-4">Join us for our annual Vacation Bible School! This year's theme is "Exploring God's Creation" with fun activities, Bible stories, and crafts for children ages 5-12. Registration is now open.</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Children</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Free</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">June 15-19</span>
+                                </div>
+                                <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-blue-700 text-white p-6 flex flex-col items-center justify-center">
+                                <div class="text-4xl font-bold">24</div>
+                                <div class="text-xl font-semibold">June</div>
+                                <div class="text-lg mt-2">2023</div>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Marriage Seminar</h3>
+                                <div class="flex items-center text-gray-700 mb-3">
+                                    <i class="fas fa-clock mr-2"></i> <span>5:00 PM - 8:00 PM</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-2"></i> <span>Fellowship Hall</span>
+                                </div>
+                                <p class="text-gray-700 mb-4">"Building a Christ-Centered Marriage" with guest speaker Bro. & Sis. Philip Chukwuma. Open to all married and engaged couples. Childcare will be provided.</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Adults</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px 2.5 py-0.5 rounded">FREE</span>
+                                </div>
+                                <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    RSVP
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-blue-700 text-white p-6 flex flex-col items-center justify-center">
+                                <div class="text-4xl font-bold">30</div>
+                                <div class="text-xl font-semibold">June</div>
+                                <div class="text-lg mt-2">2023</div>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Community Outreach</h3>
+                                <div class="flex items-center text-gray-700 mb-3">
+                                    <i class="fas fa-clock mr-2"></i> <span>8:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="flex items-center text-gray-700 mb-4">
+                                    <i class="fas fa-map-marker-alt mr-2"></i> <span>High Level Market</span>
+                                </div>
+                                <p class="text-gray-700 mb-4">Join us as we take the love of Christ to our community through free medical check-ups, food distribution, and evangelism. Volunteers are needed in various capacities.</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">All Members</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Free</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Service Opportunity</span>
+                                </div>
+                                <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Volunteer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Weekly Activities</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Sunday</h4>
+                            <ul class="text-left pl-6">
+                                <li class="mb-1"><span class="font-semibold">7:30am:</span> Prayer Meeting</li>
+                                <li class="mb-1"><span class="font-semibold">8:30am:</span> Bible Class</li>
+                                <li class="mb-1"><span class="font-semibold">9:30am:</span> Worship Service</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Wednesday</h4>
+                            <ul class="text-left pl-6">
+                                <li class="mb-1"><span class="font-semibold">5:00pm:</span> Choir Practice</li>
+                                <li class="mb-1"><span class="font-semibold">5:30pm:</span> Bible Study</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Friday</h4>
+                            <ul class="text-left pl-6">
+                                <li class="mb-1"><span class="font-semibold">4:30pm:</span> Youth Fellowship</li>
+                                <li class="mb-1"><span class="font-semibold">6:00pm:</span> Evangelism</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact-page" class="page-content hidden py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Contact Us</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-700">No.5 Owerri Street<br>High Level, Makurdi<br>Benue State, Nigeria</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-700">+234 123 456 7890 (Office)<br>+234 987 654 3210 (Evangelist)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-700">info@churchofchristmakurdi.com<br>pastor@churchofchristmakurdi.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Office Hours</h4>
+                                    <p class="text-gray-700">Monday - Friday: 8:00am - 4:00pm<br>Saturday: 10:00am - 2:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Connect With Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/share/1C4RxiYGwf/?mibextid=wwXIfr" class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-800 transition" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-700 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-700 transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Send Us a Message</h3>
+                        <form class="space-y-4" action="https://formspree.io/f/movwewgo" method="post">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="baptism">Baptism Inquiry</option>
+                                    <option value="membership">Membership Information</option>
+                                    <option value="event">Event Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition duration-300 w-full">
+                                Send Message
+                            </button>
+                        </form>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Map & Directions</h3>
+                            <div class="bg-gray-200 h-64 rounded-lg overflow-hidden">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.650234027545!2d8.528972800000002!3d7.720625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105081ca9e0378a5%3A0x24df2ff6e225bf75!2sChurch%20Of%20Christ!5e0!3m2!1sen!2sng!4v1749472909076!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <!-- Placeholder for map - would be replaced with actual Google Maps embed -->
+                                <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-map-marked-alt text-4xl mr-3"></i>
+                                    <span>Map would be displayed here</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-blue-900 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-church mr-2 text-yellow-300"></i> Church of Christ
+                        </h3>
+                        <p class="mb-2">No.5 Owerri Street, High Level Makurdi, Benue State, Nigeria</p>
+                        <p class="mb-2">A Christ-centered community dedicated to biblical truth and loving service.</p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="home">Home</a></li>
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="about">About Us</a></li>
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="beliefs">Our Beliefs</a></li>
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="sermons">Sermons</a></li>
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="events">Events</a></li>
+                            <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                        <p class="mb-4">Subscribe to our newsletter to receive updates and spiritual encouragement.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
+                            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-4 py-2 rounded-r-md transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        
+                        <!-- Admin Login Button (hidden by default, shown to admin) -->
+                        <div class="mt-6 admin-login hidden" id="admin-login-section">
+                            <button id="admin-login-btn" class="bg-grey-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                                <i class="fas fa-lock mr-2"></i> Admin Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm">
+                    <p>&copy; 2023 Church of Christ, High Level Makurdi. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-login-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-blue-900">Admin Login</h3>
+                <span class="close-modal text-2xl cursor-pointer">&times;</span>
+            </div>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="admin-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                    <input type="text" id="admin-username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label for="admin-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="admin-password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Login
+                </button>
+            </form>
+            <div id="login-error" class="mt-4 text-red-600 hidden"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard View (hidden by default) -->
+    <div id="admin-dashboard" class="hidden">
+        <!-- Sidebar -->
+        <div class="sidebar bg-blue-900 text-white w-64 fixed h-full overflow-y-auto">
+            <div class="p-4">
+                <h2 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Admin Dashboard
+                </h2>
+            </div>
+            <nav class="mt-6 ml-2 space-y-6">
+                <div>
+                    <a href="#" class="admin-nav-link active" data-section="overview">
+                      <div>
+                        <i class="fas fa-chart-line mr-3"></i> Overview
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="pages">
+                      <div>
+                          <i class="fas fa-file-alt mr-3"></i> Manage Pages
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="sermons">
+                      <div>
+                          <i class="fas fa-headphones mr-3"></i> Manage Sermons
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="events">
+                      <div>
+                          <i class="fas fa-calendar-alt mr-3"></i> Manage Events
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="media">
+                      <div>
+                          <i class="fas fa-images mr-3"></i> Media Library
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="users">
+                      <div>
+                          <i class="fas fa-users mr-3"></i> User Management
+                      </div>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="settings">
+                      <div>
+                          <i class="fas fa-cog mr-3"></i> Settings
+                      </div>
+                    </a>
+                    <a href="#" id="logout-btn" class="admin-nav-link text-red-300 hover:text-red-200">
+                        <i class="fas fa-sign-out-alt mr-3"></i> Logout
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-content ml-64 p-8">
+            <!-- Overview Section -->
+            <div id="overview-section" class="admin-section">
+                <h1 class="text-3xl font-bold text-blue-900 mb-6">Dashboard Overview</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Page Views</h3>
+                        <p class="text-3xl font-bold text-blue-700">1,243</p>
+                        <p class="text-sm text-gray-500 mt-2"><i class="fas fa-arrow-up text-green-500 mr-1"></i> 12% from last month</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Recent Sermons</h3>
+                        <p class="text-3xl font-bold text-blue-700">8</p>
+                        <p class="text-sm text-gray-500 mt-2"><i class="fas fa-arrow-up text-green-500 mr-1"></i> 2 new this month</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Upcoming Events</h3>
+                        <p class="text-3xl font-bold text-blue-700">5</p>
+                        <p class="text-sm text-gray-500 mt-2"><i class="fas fa-bell text-yellow-500 mr-1"></i> 1 happening this week</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow mb-8">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Recent Activity</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Date</th>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Action</th>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">User</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Today, 09:42 AM</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Updated About Us page</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Pastor Samuel</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Yesterday, 03:15 PM</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Uploaded new sermon</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Bro. Andrew</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">June 5, 10:30 AM</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Added new event</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">Sis. Grace</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Quick Actions</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <a href="#" class="admin-nav-link" data-section="pages" class="bg-blue-50 p-4 rounded-lg border border-blue-100 hover:bg-blue-100 transition text-center">
+                            <i class="fas fa-file-alt text-2xl text-blue-700 mb-2"></i>
+                            <p class="font-semibold">Edit Page Content</p>
+                        </a>
+                        <a href="#" class="admin-nav-link" data-section="sermons" class="bg-blue-50 p-4 rounded-lg border border-blue-100 hover:bg-blue-100 transition text-center">
+                            <i class="fas fa-headphones text-2xl text-blue-700 mb-2"></i>
+                            <p class="font-semibold">Add New Sermon</p>
+                        </a>
+                        <a href="#" class="admin-nav-link" data-section="events" class="bg-blue-50 p-4 rounded-lg border border-blue-100 hover:bg-blue-100 transition text-center">
+                            <i class="fas fa-calendar-plus text-2xl text-blue-700 mb-2"></i>
+                            <p class="font-semibold">Create Event</p>
+                        </a>
+                        <a href="#" class="admin-nav-link" data-section="media" class="bg-blue-50 p-4 rounded-lg border border-blue-100 hover:bg-blue-100 transition text-center">
+                            <i class="fas fa-upload text-2xl text-blue-700 mb-2"></i>
+                            <p class="font-semibold">Upload Media</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pages Management Section -->
+            <div id="pages-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-blue-900">Manage Website Pages</h1>
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Add New Page
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Page Title</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Updated</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-home text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Home</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 10, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-info-circle text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">About Us</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 8, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-cross text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Our Beliefs</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 2, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-hands-helping text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Ministries</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May 28, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-headphones text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Sermons</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 11, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-calendar-alt text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Events</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 10, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                                            <div class="text-sm font-medium text-gray-900">Contact</div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 5, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Published</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-eye"></i> Preview</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Page Editor -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Edit Page Content</h2>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="page-title">
+                                Page Title
+                            </label>
+                            <select id="page-title" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Home</option>
+                                <option>About Us</option>
+                                <option>Our Beliefs</option>
+                                <option>Ministries</option>
+                                <option>Sermons</option>
+                                <option>Events</option>
+                                <option>Contact</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="page-status">
+                                Page Status
+                            </label>
+                            <div class="flex items-center">
+                                <input id="published" type="radio" name="status" checked class="mr-2">
+                                <label for="published" class="text-gray-700 mr-4">Published</label>
+                                <input id="draft" type="radio" name="status" class="mr-2">
+                                <label for="draft" class="text-gray-700">Draft</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="page-content">
+                                Content
+                            </label>
+                            <textarea id="page-content" rows="15" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Discard Changes
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Sermons Management Section -->
+            <div id="sermons-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-blue-900">Manage Sermons</h1>
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Add New Sermon
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Preacher</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Duration</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm font-medium text-gray-900">Walking by Faith</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bro. Samuel Emmanuel</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 4, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">35 min</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm font-medium text-gray-900">The Power of Prayer</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bro. Andrew Joseph</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May 28, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">42 min</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm font-medium text-gray-900">Living in God's Grace</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bro. Samuel Emmanuel</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May 21, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">38 min</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Sermon Editor -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Add/Edit Sermon</h2>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-title">
+                                    Sermon Title
+                                </label>
+                                <input type="text" id="sermon-title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-preacher">
+                                    Preacher
+                                </label>
+                                <input type="text" id="sermon-preacher" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-date">
+                                    Date Preached
+                                </label>
+                                <input type="date" id="sermon-date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-duration">
+                                    Duration (minutes)
+                                </label>
+                                <input type="number" id="sermon-duration" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4 md:col-span-2">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-description">
+                                    Description
+                                </label>
+                                <textarea id="sermon-description" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-audio">
+                                    Audio File
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="sermon-audio" accept="audio/*" class="hidden">
+                                    <label for="sermon-audio" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer">
+                                        Choose File
+                                    </label>
+                                    <span id="file-name" class="ml-2 text-sm text-gray-600">No file chosen</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-thumbnail">
+                                    Thumbnail Image
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="sermon-thumbnail" accept="image/*" class="hidden">
+                                    <label for="sermon-thumbnail" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer">
+                                        Choose File
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4 md:col-span-2">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="sermon-notes">
+                                    Sermon Notes (PDF)
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="sermon-notes" accept=".pdf" class="hidden">
+                                    <label for="sermon-notes" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer">
+                                        Choose File
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mt-6">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Cancel
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Save Sermon
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Events Management Section -->
+            <div id="events-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-blue-900">Manage Events</h1>
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Add New Event
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event Title</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-medium text-gray-900">Vacation Bible School</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 15-19, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">9:00am - 12:30pm</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Church Auditorium</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Upcoming</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-medium text-gray-900">Marriage Seminar</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 24, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5:00pm - 8:00pm</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Fellowship Hall</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Upcoming</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-medium text-gray-900">Community Outreach</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 30, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8:00am - 2:00pm</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">High Level Market</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Upcoming</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-medium text-gray-900">Youth Camp</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May 26-28, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">All day</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Riverside Campsite</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Event Editor -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Add/Edit Event</h2>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-title">
+                                    Event Title
+                                </label>
+                                <input type="text" id="event-title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-date">
+                                    Date
+                                </label>
+                                <input type="date" id="event-date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-time">
+                                    Time
+                                </label>
+                                <input type="time" id="event-time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-location">
+                                    Location
+                                </label>
+                                <input type="text" id="event-location" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4 md:col-span-2">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-description">
+                                    Description
+                                </label>
+                                <textarea id="event-description" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-category">
+                                    Category
+                                </label>
+                                <select id="event-category" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Worship</option>
+                                    <option>Bible Study</option>
+                                    <option>Fellowship</option>
+                                    <option>Youth</option>
+                                    <option>Children</option>
+                                    <option>Outreach</option>
+                                    <option>Conference</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-status">
+                                    Status
+                                </label>
+                                <select id="event-status" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Upcoming</option>
+                                    <option>Ongoing</option>
+                                    <option>Completed</option>
+                                    <option>Cancelled</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-image">
+                                    Featured Image
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="event-image" accept="image/*" class="hidden">
+                                    <label for="event-image" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer">
+                                        Choose File
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-registration">
+                                    Registration Required
+                                </label>
+                                <div class="flex items-center">
+                                    <input id="event-registration-yes" type="radio" name="registration" value="yes" class="mr-2">
+                                    <label for="event-registration-yes" class="mr-4">Yes</label>
+                                    <input id="event-registration-no" type="radio" name="registration" value="no" checked class="mr-2">
+                                    <label for="event-registration-no">No</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4" id="registration-details" style="display: none;">
+                                <div class="mb-2">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="event-registration-link">
+                                        Registration Link
+                                    </label>
+                                    <input type="url" id="event-registration-link" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="event-registration-fee">
+                                        Registration Fee
+                                    </label>
+                                    <div class="relative">
+                                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">₦</span>
+                                        <input type="number" id="event-registration-fee" class="shadow appearance-none border rounded w-full py-2 pl-8 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="event-registration-deadline">
+                                        Registration Deadline
+                                    </label>
+                                    <input type="date" id="event-registration-deadline" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mt-6">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Cancel
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Save Event
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Media Library Section -->
+            <div id="media-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-blue-900">Media Library</h1>
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Upload Media
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="p-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <input type="text" placeholder="Search media..." class="border border-gray-300 rounded-l-md px-4 py-2 w-64 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded-r-md hover:bg-blue-800 transition">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div class="ml-4">
+                                <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option>All Media Types</option>
+                                    <option>Images</option>
+                                    <option>Videos</option>
+                                    <option>Audio</option>
+                                    <option>Documents</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                            <!-- Image 1 -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-gray-200 relative">
+                                    <img src="https://images.unsplash.com/photo-1542403779-7d964f321eb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Media" class="w-full h-full object-cover">
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Church Building</p>
+                                    <p class="text-xs text-gray-500">JPEG • 2.4MB</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Image 2 -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-gray-200 relative">
+                                    <img src="https://images.unsplash.com/photo-1601758064235-8f6c5d3d6d6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Media" class="w-full h-full object-cover">
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Bible Study</p>
+                                    <p class="text-xs text-gray-500">JPEG • 1.8MB</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Audio File -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-blue-50 flex items-center justify-center">
+                                    <i class="fas fa-volume-up text-4xl text-blue-600"></i>
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Sunday Sermon 6-4</p>
+                                    <p class="text-xs text-gray-500">MP3 • 35.2MB</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PDF -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-blue-50 flex items-center justify-center">
+                                    <i class="fas fa-file-pdf text-4xl text-red-600"></i>
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Vacation Bible School</p>
+                                    <p class="text-xs text-gray-500">PDF • 5.1MB</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Video -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-gray-200 relative">
+                                    <i class="fas fa-play text-4xl text-blue-600 absolute inset-0 m-auto"></i>
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Youth Camp Highlights</p>
+                                    <p class="text-xs text-gray-500">MP4 • 256MB</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Image 3 -->
+                            <div class="border rounded-lg overflow-hidden">
+                                <div class="h-32 bg-gray-200 relative">
+                                    <img src="https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Media" class="w-full h-full object-cover">
+                                    <div class="absolute top-2 right-2">
+                                        <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-sm font-medium text-gray-900 truncate">Worship Team</p>
+                                    <p class="text-xs text-gray-500">JPEG • 2.1MB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border-t border-gray-200 flex justify-between items-center">
+                        <span class="text-sm text-gray-700">Showing <span class="font-medium">1</span> to <span class="font-medium">6</span> of <span class="font-medium">124</span> items</span>
+                        <div class="flex space-x-1">
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <button class="px-3 py-1 border border-blue-500 rounded-md bg-blue-50 text-blue-600 font-medium">
+                                1
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                2
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                3
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upload Media Form -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Upload New Media</h2>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="media-files">
+                                Select Files
+                            </label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="media-files" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none">
+                                            <span>Upload files</span>
+                                            <input id="media-files" name="media-files" type="file" multiple class="sr-only">
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">PNG, JPG, GIF, PDF, MP3, MP4 up to 10MB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="media-category">
+                                    Category
+                                </label>
+                                <select id="media-category" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>General</option>
+                                    <option>Sermons</option>
+                                    <option>Events</option>
+                                    <option>Ministries</option>
+                                    <option>People</option>
+                                    <option>Documents</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="media-album">
+                                    Album (optional)
+                                </label>
+                                <select id="media-album" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>No Album</option>
+                                    <option>Vacation Bible School 2023</option>
+                                    <option>Youth Camp</option>
+                                    <option>Sunday Worship</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mt-6">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Cancel
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Upload Files
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- User Management Section -->
+            <div id="users-section" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-blue-900">User Management</h1>
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Add New User
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+                    <div class="p-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <input type="text" placeholder="Search users..." class="border border-gray-300 rounded-l-md px-4 py-2 w-64 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded-r-md hover:bg-blue-800 transition">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div class="ml-4">
+                                <select class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option>All Users</option>
+                                    <option>Administrators</option>
+                                    <option>Editors</option>
+                                    <option>Authors</option>
+                                    <option>Subscribers</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Login</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center">
+                                                <span class="font-semibold">SE</span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Samuel Emmanuel</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">pastorsamuel@churchofchristmakurdi.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">Administrator</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Today, 08:45 AM</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center">
+                                                <span class="font-semibold">AJ</span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Andrew Joseph</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">broandrew@churchofchristmakurdi.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Editor</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yesterday, 03:12 PM</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center">
+                                                <span class="font-semibold">GE</span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Grace Enwongo</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">sisgrace@churchofchristmakurdi.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Editor</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June 5, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center">
+                                                <span class="font-semibold">JO</span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">John Okafor</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">johnokafor@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Author</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May 28, 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-4 border-t border-gray-200 flex justify-between items-center">
+                        <span class="text-sm text-gray-700">Showing <span class="font-medium">1</span> to <span class="font-medium">4</span> of <span class="font-medium">8</span> users</span>
+                        <div class="flex space-x-1">
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <button class="px-3 py-1 border border-blue-500 rounded-md bg-blue-50 text-blue-600 font-medium">
+                                1
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                2
+                            </button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-700 hover:bg-gray-50">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- User Editor -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Add/Edit User</h2>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-firstname">
+                                    First Name
+                                </label>
+                                <input type="text" id="user-firstname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-lastname">
+                                    Last Name
+                                </label>
+                                <input type="text" id="user-lastname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4 md:col-span-2">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-email">
+                                    Email Address
+                                </label>
+                                <input type="email" id="user-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-role">
+                                    Role
+                                </label>
+                                <select id="user-role" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Subscriber</option>
+                                    <option>Author</option>
+                                    <option>Editor</option>
+                                    <option>Administrator</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-status">
+                                    Status
+                                </label>
+                                <select id="user-status" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                    <option>Suspended</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-password">
+                                    Password
+                                </label>
+                                <input type="password" id="user-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-confirm-password">
+                                    Confirm Password
+                                </label>
+                                <input type="password" id="user-confirm-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="user-avatar">
+                                    Profile Picture
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="user-avatar" accept="image/*" class="hidden">
+                                    <label for="user-avatar" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer">
+                                        Choose File
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mt-6">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Cancel
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Save User
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Settings Section -->
+            <div id="settings-section" class="admin-section hidden">
+                <h1 class="text-3xl font-bold text-blue-900 mb-6">Website Settings</h1>
+                
+                <div class="bg-white rounded-lg shadow p-6 mb-8">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">General Settings</h2>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-title">
+                                    Site Title
+                                </label>
+                                <input type="text" id="site-title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="Church of Christ, High Level Makurdi">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-tagline">
+                                    Tagline
+                                </label>
+                                <input type="text" id="site-tagline" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="A Christ-centered community dedicated to biblical truth and loving service">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-address">
+                                    Church Address
+                                </label>
+                                <textarea id="site-address" rows="2" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">No.5 Owerri Street, High Level, Makurdi, Benue State, Nigeria</textarea>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-contact">
+                                    Contact Information
+                                </label>
+                                <textarea id="site-contact" rows="2" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">Phone: +234 123 456 7890
+Email: info@churchofchristmakurdi.com</textarea>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-logo">
+                                    Church Logo
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="site-logo" accept="image/*" class="hidden">
+                                    <label for="site-logo" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer mr-4">
+                                        Choose File
+                                    </label>
+                                    <span class="text-sm text-gray-600">Current logo: logo.png</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="site-favicon">
+                                    Favicon
+                                </label>
+                                <div class="flex items-center">
+                                    <input type="file" id="site-favicon" accept="image/*" class="hidden">
+                                    <label for="site-favicon" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded cursor-pointer mr-4">
+                                        Choose File
+                                    </label>
+                                    <span class="text-sm text-gray-600">Current favicon: favicon.ico</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mt-6">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Reset
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Service Times</h2>
+                    <form>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-calendar-day mr-2 text-blue-600"></i> Sunday Services
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="sunday-morning-service">
+                                        Morning Worship
+                                    </label>
+                                    <input type="time" id="sunday-morning-service" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="09:30">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="sunday-school">
+                                        Bible Study
+                                    </label>
+                                    <input type="time" id="sunday-school" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="08:30">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="sunday-evening-service">
+                                        Evening Service
+                                    </label>
+                                    <input type="time" id="sunday-evening-service" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-calendar-day mr-2 text-blue-600"></i> Wednesday Services
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="wednesday-bible-study">
+                                        Bible Study
+                                    </label>
+                                    <input type="time" id="wednesday-bible-study" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="17:30">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="wednesday-prayer-meeting">
+                                        Prayer Meeting
+                                    </label>
+                                    <input type="time" id="wednesday-prayer-meeting" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-calendar-day mr-2 text-blue-600"></i> Other Regular Activities
+                            </h3>
+                            <div class="space-y-4" id="other-activities-container">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-name-1">
+                                            Activity Name
+                                        </label>
+                                        <input type="text" id="activity-name-1" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="Youth Fellowship">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-day-1">
+                                            Day
+                                        </label>
+                                        <select id="activity-day-1" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                            <option>Sunday</option>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                            <option>Thursday</option>
+                                            <option>Friday</option>
+                                            <option>Saturday</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-time-1">
+                                            Time
+                                        </label>
+                                        <input type="time" id="activity-time-1" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="16:30">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-name-2">
+                                            Activity Name
+                                        </label>
+                                        <input type="text" id="activity-name-2" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="Choir Practice">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-day-2">
+                                            Day
+                                        </label>
+                                        <select id="activity-day-2" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                            <option>Sunday</option>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                            <option selected>Thursday</option>
+                                            <option>Friday</option>
+                                            <option>Saturday</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-time-2">
+                                            Time
+                                        </label>
+                                        <input type="time" id="activity-time-2" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="17:00">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" id="add-activity-btn" class="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded text-sm">
+                                <i class="fas fa-plus mr-2"></i> Add Another Activity
+                            </button>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                Reset
+                            </button>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                                Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Website Manual Document (would typically be a separate text file)
+        const websiteManual = `Church of Christ Makurdi - Website Admin Manual
+
+1. Introduction
+Welcome to your church website admin panel. This manual will guide you through the process of managing and updating your church website.
+
+2. Getting Started
+- To access the admin area, click the "Admin Login" button in the footer (visible only to logged-in admins)
+- Use the credentials provided to you by the website administrator
+- After login, you'll see the admin dashboard with various sections
+
+3. Managing Website Content
+3.1 Pages
+- Navigate to "Manage Pages" in the sidebar
+- Select the page you want to edit from the list
+- Make your changes in the editor
+- Click "Save Changes" when done
+
+3.2 Sermons
+- To add a new sermon, click "Add New Sermon"
+- Fill in all required details (title, preacher, date, etc.)
+- Upload audio file (MP3 format recommended)
+- Optionally upload sermon notes (PDF) and a thumbnail image
+- Click "Save Sermon"
+
+3.3 Events
+- To add an event, click "Add New Event"
+- Fill in event details including date, time, location, and description
+- Upload a featured image if available
+- Set registration options if needed
+- Save when complete
+
+4. Media Library
+- Upload all images, audio files, documents here
+- Organize files into categories for easy management
+- Replace files by uploading new versions with the same name
+
+5. User Management
+- Add new users and assign appropriate roles
+- Administrators have full access
+- Editors can manage content but not settings
+- Authors can only add/edit their own content
+
+6. Website Settings
+6.1 General Settings
+- Edit church name, address, contact info
+- Update logos and favicon
+- Modify service times
+
+6.2 Other Settings
+- Newsletter settings
+- Social media links
+- Analytics tracking
+
+7. Best Practices
+- Always preview changes before saving
+- Keep content updated regularly
+- Back up important data
+- Use strong passwords for admin accounts
+
+8. Troubleshooting
+- If you can't log in, use the password reset option
+- For technical issues, contact your web developer
+- Clear your browser cache if you see outdated content
+
+For additional support, please contact:
+support@churchofchristmakurdi.com
++234 123 456 7890`;
+
+        // JavaScript for the website functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Page navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Hide all page contents
+                    pageContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // Show the selected page content
+                    const pageId = this.getAttribute('data-page') + '-page';
+                    document.getElementById(pageId).classList.remove('hidden');
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Set home page as active by default
+            document.querySelector('.nav-link.active').click();
+            
+            // Admin login functionality
+            const adminLoginBtn = document.getElementById('admin-login-btn');
+            const adminLoginModal = document.getElementById('admin-login-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const loginForm = document.getElementById('login-form');
+            const loginError = document.getElementById('login-error');
+            const frontendView = document.getElementById('frontend-view');
+            const adminDashboard = document.getElementById('admin-dashboard');
+            
+            // Show admin login button (for demo purposes - would be hidden in production)
+            document.getElementById('admin-login-section').classList.remove('hidden');
+            
+            adminLoginBtn.addEventListener('click', function() {
+                adminLoginModal.style.display = 'block';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                adminLoginModal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === adminLoginModal) {
+                    adminLoginModal.style.display = 'none';
+                }
+            });
+            
+            // Simple admin login for demo purposes
+            // In a real application, this would be handled by a server with proper authentication
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const username = document.getElementById('admin-username').value;
+                const password = document.getElementById('admin-password').value;
+                
+                // Demo credentials
+                if (username === 'admin' && password === 'password123') {
+                    loginError.classList.add('hidden');
+                    adminLoginModal.style.display = 'none';
+                    
+                    // Hide frontend and show admin dashboard
+                    frontendView.classList.add('hidden');
+                    adminDashboard.classList.remove('hidden');
+                    
+                    // Set overview as active
+                    document.querySelector('.admin-nav-link.active').click();
+                } else {
+                    loginError.textContent = 'Invalid username or password';
+                    loginError.classList.remove('hidden');
+                }
+            });
+            
+            // Admin dashboard navigation
+            const adminNavLinks = document.querySelectorAll('.admin-nav-link');
+            const adminSections = document.querySelectorAll('.admin-section');
+            
+            adminNavLinks.forEach(link => {
+                if (link.id !== 'logout-btn') {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all links
+                        adminNavLinks.forEach(navLink => {
+                            navLink.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked link
+                        this.classList.add('active');
+                        
+                        // Hide all admin sections
+                        adminSections.forEach(section => {
+                            section.classList.add('hidden');
+                        });
+                        
+                        // Show the selected section
+                        const sectionId = this.getAttribute('data-section') + '-section';
+                        document.getElementById(sectionId).classList.remove('hidden');
+                    });
+                }
+            });
+            
+            // Logout functionality
+            document.getElementById('logout-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide admin dashboard and show frontend
+                adminDashboard.classList.add('hidden');
+                frontendView.classList.remove('hidden');
+                
+                // Reset admin login form
+                document.getElementById('admin-username').value = '';
+                document.getElementById('admin-password').value = '';
+                loginError.classList.add('hidden');
+            });
+            
+            // Registration required toggle for events
+            document.querySelectorAll('input[name="registration"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const registrationDetails = document.getElementById('registration-details');
+                    
+                    if (document.getElementById('event-registration-yes').checked) {
+                        registrationDetails.style.display = 'block';
+                    } else {
+                        registrationDetails.style.display = 'none';
+                    }
+                });
+            });
+            
+            // File input display for sermon audio
+            document.getElementById('sermon-audio').addEventListener('change', function() {
+                const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                document.getElementById('file-name').textContent = fileName;
+            });
+            
+            // Add activity button for service times
+            let activityCounter = 3;
+            document.getElementById('add-activity-btn').addEventListener('click', function() {
+                const container = document.getElementById('other-activities-container');
+                const newActivity = document.createElement('div');
+                newActivity.className = 'grid grid-cols-1 md:grid-cols-3 gap-4 items-end';
+                newActivity.innerHTML = `
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-name-${activityCounter}">
+                            Activity Name
+                        </label>
+                        <input type="text" id="activity-name-${activityCounter}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-day-${activityCounter}">
+                            Day
+                        </label>
+                        <select id="activity-day-${activityCounter}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="activity-time-${activityCounter}">
+                            Time
+                        </label>
+                        <input type="time" id="activity-time-${activityCounter}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                `;
+                container.appendChild(newActivity);
+                activityCounter++;
+            });
+            
+            // You could download the manual if needed
+            // console.log(websiteManual);  // This would be a downloadable text file in production
+        });
+    </script>
+</body>
+</html>
