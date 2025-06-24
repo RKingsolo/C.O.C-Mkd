@@ -678,16 +678,19 @@
                             <li><a href="#" class="hover:text-yellow-300 transition nav-link" data-page="contact">Contact</a></li>
                         </ul>
                     </div>
-                    
+
+                    <!-- Newsletter -->
                     <div>
                         <h3 class="text-xl font-bold mb-4">Newsletter</h3>
                         <p class="mb-4">Subscribe to our newsletter to receive updates and spiritual encouragement.</p>
-                        <form class="flex">
+                        <form id="subscribeForm" class="flex">
                             <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
                             <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-4 py-2 rounded-r-md transition">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
+
+                        <div id="response"></div>
                         
                         <!-- Admin Login Button (hidden by default, shown to admin) -->
                         <div class="mt-6 admin-login hidden" id="admin-login-section">

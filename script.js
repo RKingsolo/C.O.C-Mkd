@@ -267,3 +267,20 @@ support@churchofchristmakurdi.com
             // You could download the manual if needed
             // console.log(websiteManual);  // This would be a downloadable text file in production
         });
+
+                const form = document.getElementById("subscribeForm");
+            form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+
+            const response = await fetch("https://script.google.com/macros/s/AKfycby3-hxFKX7MKED7l3Pmw-IQCZbrxvxY4aX9pWpeCIci3EhPqGE32ZEaZDcNDF0KvEOo/exec", {
+                method: "POST",
+                body: JSON.stringify({ email }),
+                headers: {
+                "Content-Type": "application/json"
+                }
+            });
+
+            const result = await response.json();
+            document.getElementById("response").innerText = result.message;
+            });
