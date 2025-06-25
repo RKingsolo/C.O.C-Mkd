@@ -271,27 +271,37 @@ support@churchofchristmakurdi.com
 
             document.getElementById("subscribeForm").addEventListener("submit", async function (e) {
                 e.preventDefault();
-                const email = document.getElementById("emailInput").value;
-
+                const email = document.getElementById("emailInput").value.trim();
                 const responseElement = document.getElementById("response");
-
+            
+                if (!email) {
+                  responseElement.innerText = "Please enter a valid email address.";
+                  responseElement.classList.add("text-red-700");
+                  return;
+                }
+            
                 try {
-                const response = await fetch("https://script.google.com/macros/s/AKfycby3-hxFKX7MKED7l3Pmw-IQCZbrxvxY4aX9pWpeCIci3EhPqGE32ZEaZDcNDF0KvEOo/exec", {
+                  const res = await fetch("https://script.google.com/macros/s/AKfycbwj3r-Te6V9hkB7l53URzkVl22C4mCHrPpsDIHbhqLWz4X4-Th-iXJE66VaNmjWRVRw/exec", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email: email })
-                });
-
-                const result = await response.json();
-                responseElement.innerText = result.message || "Subscription successful!";
-                responseElement.classList.remove("text-red-700");
-                responseElement.classList.add("text-green-700");
-                } catch (error) {
-                responseElement.innerText = "Something went wrong. Please try again.";
-                responseElement.classList.remove("text-green-700");
-                responseElement.classList.add("text-red-700");
+                    body: JSON.stringify({ email })
+                  });
+            
+                  const result = await res.json();
+                  if (result.success) {
+                    responseElement.innerText = result.message;
+                    responseElement.classList.remove("text-red-700");
+                    responseElement.classList.add("text-green-700");
+                  } else {
+                    responseElement.innerText = result.message;
+                    responseElement.classList.remove("text-green-700");
+                    responseElement.classList.add("text-red-700");
+                  }
+                } catch (err) {
+                  responseElement.innerText = "An error occurred. Please try again.";
+                  responseElement.classList.add("text-red-700");
                 }
-
+            
                 document.getElementById("emailInput").value = "";
-            });
+              });           
         });
