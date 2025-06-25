@@ -266,21 +266,32 @@ support@churchofchristmakurdi.com
             
             // You could download the manual if needed
             // console.log(websiteManual);  // This would be a downloadable text file in production
-        });
 
-                const form = document.getElementById("subscribeForm");
-            form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const email = document.getElementById("email").value;
+            // Newsletter
 
-            const response = await fetch("https://script.google.com/macros/s/AKfycby3-hxFKX7MKED7l3Pmw-IQCZbrxvxY4aX9pWpeCIci3EhPqGE32ZEaZDcNDF0KvEOo/exec", {
-                method: "POST",
-                body: JSON.stringify({ email }),
-                headers: {
-                "Content-Type": "application/json"
+            document.getElementById("subscribeForm").addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const email = document.getElementById("emailInput").value;
+
+                const responseElement = document.getElementById("response");
+
+                try {
+                const response = await fetch("https://script.google.com/macros/s/AKfycby3-hxFKX7MKED7l3Pmw-IQCZbrxvxY4aX9pWpeCIci3EhPqGE32ZEaZDcNDF0KvEOo/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: email })
+                });
+
+                const result = await response.json();
+                responseElement.innerText = result.message || "Subscription successful!";
+                responseElement.classList.remove("text-red-700");
+                responseElement.classList.add("text-green-700");
+                } catch (error) {
+                responseElement.innerText = "Something went wrong. Please try again.";
+                responseElement.classList.remove("text-green-700");
+                responseElement.classList.add("text-red-700");
                 }
-            });
 
-            const result = await response.json();
-            document.getElementById("response").innerText = result.message;
+                document.getElementById("emailInput").value = "";
             });
+        });
