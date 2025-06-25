@@ -684,8 +684,13 @@
                         <h3 class="text-xl font-bold mb-4">Newsletter</h3>
                         <p class="mb-4">Subscribe to our newsletter to receive updates and spiritual encouragement.</p>
 
-                        <form id="subscribeForm" class="flex">
-                            <input id="emailInput" type="email" placeholder="Your email" required
+                        <form action="https://script.google.com/macros/s/AKfycbwj3r-Te6V9hkB7l53URzkVl22C4mCHrPpsDIHbhqLWz4X4-Th-iXJE66VaNmjWRVRw/exec"
+                            method="POST"
+                            target="hidden_iframe"
+                            onsubmit="submitted=true; setTimeout(showThankYou, 1000);"
+                            id="subscribeForm"
+                            class="flex">
+                            <input name="email" type="email" placeholder="Your email" required
                                 class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
                             <button type="submit"
                                     class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-4 py-2 rounded-r-md transition">
@@ -693,7 +698,8 @@
                             </button>
                         </form>
 
-                        <div id="response" class="mt-2 text-sm font-medium"></div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                        <div id="response" class="mt-2 text-green-700 text-sm font-medium"></div>
 
                                                 
                         <!-- Admin Login Button (hidden by default, shown to admin) -->

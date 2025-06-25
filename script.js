@@ -269,39 +269,11 @@ support@churchofchristmakurdi.com
 
             // Newsletter
 
-            document.getElementById("subscribeForm").addEventListener("submit", async function (e) {
-                e.preventDefault();
-                const email = document.getElementById("emailInput").value.trim();
-                const responseElement = document.getElementById("response");
-            
-                if (!email) {
-                  responseElement.innerText = "Please enter a valid email address.";
-                  responseElement.classList.add("text-red-700");
-                  return;
+            let submitted = false;
+            function showThankYou() {
+                if (submitted) {
+                document.getElementById("subscribeForm").style.display = "none";
+                document.getElementById("response").innerText = "Thank you for subscribing!";
                 }
-            
-                try {
-                  const res = await fetch("https://script.google.com/macros/s/AKfycbwj3r-Te6V9hkB7l53URzkVl22C4mCHrPpsDIHbhqLWz4X4-Th-iXJE66VaNmjWRVRw/exec", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email })
-                  });
-            
-                  const result = await res.json();
-                  if (result.success) {
-                    responseElement.innerText = result.message;
-                    responseElement.classList.remove("text-red-700");
-                    responseElement.classList.add("text-green-700");
-                  } else {
-                    responseElement.innerText = result.message;
-                    responseElement.classList.remove("text-green-700");
-                    responseElement.classList.add("text-red-700");
-                  }
-                } catch (err) {
-                  responseElement.innerText = "An error occurred. Please try again.";
-                  responseElement.classList.add("text-red-700");
-                }
-            
-                document.getElementById("emailInput").value = "";
-              });           
+            }           
         });
