@@ -267,13 +267,5 @@ support@churchofchristmakurdi.com
             // You could download the manual if needed
             // console.log(websiteManual);  // This would be a downloadable text file in production
 
-            // Newsletter
-
-            let submitted = false;
-            function showThankYou() {
-                if (submitted) {
-                document.getElementById("subscribeForm").style.display = "none";
-                document.getElementById("response").innerText = "Thank you for subscribing!";
-                }
-            }           
+           
         });
