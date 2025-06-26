@@ -50,3 +50,10 @@
         .dashboard-content {
             transition: margin-left 0.3s;
         }
+        .sermontext {
+            font-style: italic !important;
+
+            /* font-size: 1.5rem;
+            line-height: 1.6;
+            color: #1e3a8a; Tailwind's blue-900 */
+        }
