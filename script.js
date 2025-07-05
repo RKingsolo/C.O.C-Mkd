@@ -111,7 +111,25 @@ support@churchofchristmakurdi.com
             });
             
             // Set home page as active by default
-            document.querySelector('.nav-link.active').click();
+            // document.querySelector('.nav-link.active').click();
+            // Show the correct section based on URL hash, or default to home
+            const initialHash = window.location.hash;
+            let matched = false;
+
+            if (initialHash) {
+                const targetPage = initialHash.replace('#', '');
+                const targetLink = document.querySelector(`.nav-link[data-page="${targetPage}"]`);
+                
+                if (targetLink) {
+                    targetLink.click();
+                    matched = true;
+                }
+            }
+
+            if (!matched) {
+                document.querySelector('.nav-link.active').click(); // fallback to home
+            }
+
             
             // Admin login functionality
             const adminLoginBtn = document.getElementById('admin-login-btn');
