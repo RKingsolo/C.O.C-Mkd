@@ -14,6 +14,11 @@
         .sermon-card:hover {
             transform: translateY(-5px);
         }
+        /* .nav-name {
+            font-weight: 600 !important;
+            color: white /* Tailwind's blue-900 */
+            font-size: 1.2rem;
+        } */
         /* Animation for the welcome text */
         @keyframes slideIn {
             from { transform: translateY(20px); opacity: 0; }
