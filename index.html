@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/new.css">
     <link rel="icon" href="/src/aaron-burden--uj3Y7r1BeM-unsplash.jpg">
+    <link rel="stylesheet" href="/src/tailwind/css/font-awesome-6.4.0-cssall.min.css">
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Frontend User View -->
@@ -508,28 +509,33 @@
                                 <div class="text-lg mt-2">2023</div>
                             </div>
                             <div class="md:w-2/3 p-6">
-                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Vacation Bible School</h3>
+                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Upland Bible College</h3>
                                 <div class="flex items-center text-gray-700 mb-3">
                                     <i class="fas fa-clock mr-2"></i> <span>9:00 AM - 12:30 PM Daily</span>
                                 </div>
                                 <div class="flex items-center text-gray-700 mb-4">
                                     <i class="fas fa-map-marker-alt mr-2"></i> <span>Church Auditorium</span>
                                 </div>
-                                <p class="text-gray-700 mb-4">Join us for our annual Vacation Bible School! This year's theme is "Exploring God's Creation" with fun activities, Bible stories, and crafts for children ages 5-12. Registration is now open.</p>
+                                <p class="text-gray-700 mb-4">
+                                    Join us for our annual Vacation Bible School!. Registration is now open.
+                                </p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Children</span>
-                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Free</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Adults</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded hidden">Free</span>
                                     <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">June 15-19</span>
                                 </div>
-                                <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
-                                    Register Now
-                                </button>
+                                <a href="#" class="nav-link" data-page="contact">
+                                    <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                        Register Now
+                                    </button>
+                                </a>
+                                
                             </div>
                         </div>
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8">
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8 hidden">
                         <div class="md:flex">
                             <div class="md:w-1/3 bg-blue-700 text-white p-6 flex flex-col items-center justify-center">
                                 <div class="text-4xl font-bold">24</div>
@@ -557,7 +563,7 @@
                     </div>
                     
                     <!-- Event 3 -->
-                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8">
+                    <div class="bg-blue-50 rounded-lg overflow-hidden shadow-md mb-8 hidden">
                         <div class="md:flex">
                             <div class="md:w-1/3 bg-blue-700 text-white p-6 flex flex-col items-center justify-center">
                                 <div class="text-4xl font-bold">30</div>
@@ -592,23 +598,32 @@
                         <div class="bg-blue-100 p-4 rounded-lg">
                             <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Sunday</h4>
                             <ul class="text-left pl-6">
-                                <li class="mb-1"><span class="font-semibold">7:30am:</span> Prayer Meeting</li>
-                                <li class="mb-1"><span class="font-semibold">8:30am:</span> Bible Class</li>
-                                <li class="mb-1"><span class="font-semibold">9:30am:</span> Worship Service</li>
+                                <!-- <li class="mb-1"><span class="font-semibold hidden">7:30am:</span> Prayer Meeting</li>
+                                <li class="mb-1"><span class="font-semibold hidden">8:30am:</span> Bible Class</li> -->
+                                <li class="mb-1"><span class="font-semibold">9:00am:</span> Worship Service</li>
                             </ul>
                         </div>
+
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Tuesday</h4>
+                            <ul class="text-left pl-6">
+                                <!-- <li class="mb-1"><span class="font-semibold hidden">5:00pm:</span> Choir Practice</li> -->
+                                <li class="mb-1"><span class="font-semibold">5:00pm:</span> Youth Fellowship</li>
+                            </ul>
+                        </div>
+
                         <div class="bg-blue-100 p-4 rounded-lg">
                             <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Wednesday</h4>
                             <ul class="text-left pl-6">
-                                <li class="mb-1"><span class="font-semibold">5:00pm:</span> Choir Practice</li>
-                                <li class="mb-1"><span class="font-semibold">5:30pm:</span> Bible Study</li>
+                                <!-- <li class="mb-1"><span class="font-semibold hidden">5:00pm:</span> Choir Practice</li> -->
+                                <li class="mb-1"><span class="font-semibold">5:00pm:</span> Bible Study</li>
                             </ul>
                         </div>
                         <div class="bg-blue-100 p-4 rounded-lg">
                             <h4 class="font-bold text-blue-800 mb-2 flex items-center"><i class="fas fa-calendar-day mr-2 text-blue-600"></i> Friday</h4>
                             <ul class="text-left pl-6">
-                                <li class="mb-1"><span class="font-semibold">4:30pm:</span> Youth Fellowship</li>
-                                <li class="mb-1"><span class="font-semibold">6:00pm:</span> Evangelism</li>
+                                <li class="mb-1"><span class="font-semibold">5:00pm:</span> Prayer Meeting</li>
+                                <!-- <li class="mb-1"><span class="font-semibold">6:00pm:</span> Evangelism</li> -->
                             </ul>
                         </div>
                     </div>
@@ -673,7 +688,7 @@
                                 <a href="#" class="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-700 transition">
                                     <i class="fab fa-youtube"></i>
                                 </a>
-                                <a href="#" class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-700 transition">
+                                <a href="https://chat.whatsapp.com/ELHuTRgGzpvIEuvJRPp1Pc?mode=r_t" target="_blank" class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-700 transition">
                                     <i class="fab fa-whatsapp"></i>
                                 </a>
                             </div>
@@ -702,6 +717,7 @@
                                     <option value="baptism">Baptism Inquiry</option>
                                     <option value="membership">Membership Information</option>
                                     <option value="event">Event Information</option>
+                                    <option value="admission">Admission Inquiry</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
@@ -710,6 +726,10 @@
                                 <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
                                 <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required></textarea>
                             </div>
+
+                            <!-- Hidden input to redirect on success -->
+                            <input type="hidden" name="_redirect" value="https://vscode.dev/github/RKingsolo/C.O.C-Mkd/blob/main/index.html">
+
                             
                             <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition duration-300 w-full">
                                 Send Message
@@ -743,10 +763,12 @@
                         <p class="mb-2">No.5 Owerri Street, High Level Makurdi, Benue State, Nigeria</p>
                         <p class="mb-2">A Christ-centered community dedicated to biblical truth and loving service.</p>
                         <div class="flex space-x-4 mt-4">
-                            <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/share/1C4RxiYGwf/?mibextid=wwXIfr" target="_blank" class="text-white hover:text-yellow-300 transition"><i class="fab fa-facebook-f"></i>
+                            </a>
                             <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="text-white hover:text-yellow-300 transition"><i class="fab fa-youtube"></i></a>
+                            <a href="https://chat.whatsapp.com/ELHuTRgGzpvIEuvJRPp1Pc?mode=r_t" target="_blank" class="text-white hover:text-yellow-300 transition"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     
@@ -2168,5 +2190,6 @@ Email: info@churchofchristmakurdi.com</textarea>
             .catch(error => console.error('Error!', error.message))
         })
      </script>
+     <script src="/src/tailwind/tailwind script/cdn.tailwindcss.com.3.4.16.js"></script>
   
 </html>
