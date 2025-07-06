@@ -110,7 +110,7 @@ support@churchofchristmakurdi.com
                 });
             });
             
-            // About Us
+            // About Us Image Slideshow
             const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", "src/images/WEBUPDATE/children.jpg"];
             let index = 0;
 
