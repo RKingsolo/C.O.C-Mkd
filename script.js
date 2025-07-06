@@ -110,6 +110,24 @@ support@churchofchristmakurdi.com
                 });
             });
             
+            // About Us
+            const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", "src/images/WEBUPDATE/children.jpg"];
+            let index = 0;
+
+            function changeImage(){
+                const img = document.getElementById("slideshow");
+                img.classList.remove("opacity-100");
+                img.classList.add("opacity-0");
+
+                setTimeout(() => {
+                    index = (index + 1) % images.length;
+                    img.src = images[index];
+                    img.classList.remove("opacity-0");
+                    img.classList.add("opacity-100");
+                }, 300);
+            }
+            setInterval(changeImage, 3000); // Change image every 3 seconds
+
             // Set home page as active by default
             document.querySelector('.nav-link.active').click();
             
