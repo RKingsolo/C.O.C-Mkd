@@ -126,16 +126,14 @@ support@churchofchristmakurdi.com
                     img.classList.add("opacity-100");
                 }, 300);
             }
-            setInterval(changeImage, 3000); // Change image every 3 seconds
+            setInterval(changeImage, 4000); // Change image every 4 seconds
 
             
 
             // Set home page as active by default
             document.querySelector('.nav-link.active').click();
 
-            // Auto-rotating text for Our Affirmations section
-            // This will display each affirmation message one by one
-          
+                      
             
             // Admin login functionality
             const adminLoginBtn = document.getElementById('admin-login-btn');
@@ -322,7 +320,7 @@ support@churchofchristmakurdi.com
                 index = (index + 1) % messages.length; // Loop back
             }
             function startRotation() {
-                interValid = setInterval(showMessage, 10000); // Change message every 5 seconds
+                interValid = setInterval(showMessage, 10000); // Change message every 9 seconds
             }
             function stopRotation() {
                 clearInterval(interValid);
