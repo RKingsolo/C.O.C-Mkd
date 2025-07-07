@@ -20,6 +20,14 @@
             font-size: 1.2rem;
         } */
         /* Animation for the welcome text */
+
+        #autoText {
+            font-size: 1.2rem;
+            transition: opacity 0.5s ease-in-out;
+            max-width: 600px;
+            margin: 30px auto;
+
+
         @keyframes slideIn {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }

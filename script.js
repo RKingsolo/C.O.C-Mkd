@@ -128,8 +128,14 @@ support@churchofchristmakurdi.com
             }
             setInterval(changeImage, 3000); // Change image every 3 seconds
 
+            
+
             // Set home page as active by default
             document.querySelector('.nav-link.active').click();
+
+            // Auto-rotating text for Our Affirmations section
+            // This will display each affirmation message one by one
+          
             
             // Admin login functionality
             const adminLoginBtn = document.getElementById('admin-login-btn');
@@ -287,3 +293,43 @@ support@churchofchristmakurdi.com
 
            
         });
+
+        // Auto-rotating text for Our Affirmations section
+        // This will display each affirmation message one by one
+      const messages = [
+                "1. We confess Jesus Christ as God, our Lord and Savior, who is revealed in the Bible, which is the infallible Word of God.",
+                "2. We affirm our commitment to the Great Commission of our Lord, and we declare our willingness to go anywhere, do anything, and sacrifice anything God requires of us in the fulfillment of that commission.",
+                "3. We respond to God's call to the biblical ministry of the evangelist, and accept our solemn responsibility to preach the Word to all peoples as God gives opportunity.",
+                "4. God loves every human being, who, apart from faith in Christ, is under God's judgment and destined for hell.",
+                "5. The heart of the biblical message is the good news of God's salvation, which comes by grace alone through faith in the risen Lord Jesus Christ and His atoning death on the cross for our sins.",
+                "6. In our proclamation of the Gospel we recognize the urgency of calling all to decision to follow Jesus Christ as Lord and Savior, and to do so lovingly and without coercion or manipulation.",
+                "7. We need and desire to be filled and controlled by the Holy Spirit as we bear witness to the Gospel of Jesus Christ, because God alone can turn sinners from their sin and bring them to everlasting life.",
+                "8. We acknowledge our obligation, as servants of God,  to lead lives of holiness and moral purity, knowing that we exemplify Christ to the church and to the world.",
+                "9. A life of regular and faithful prayer and Bible study is essential to our personal spiritual growth, and to our power for ministry.",
+                "10. We will be faithful stewards of all that God gives us, and will be accountable to others in the finances of our ministry, and honest in reporting our statistics.",
+                "11. Our families are a responsibility given to us by God, and are a sacred trust to be kept as faithfully as our call to minister to others.",
+                "12. We are responsible to the church, and will endeavor always to conduct our ministries so as to build up the local body of believers and serve the church at large.",
+                "13. We are responsible to arrange for the spiritual care of those who come to faith under our ministry, to encourage them to identify with the local body of believers, and seek to provide for the instruction of believers in witnessing to the Gospel.",
+                "14. We share Christ's deep concern for the personal and social suffering of humanity, and we accept our responsibility as Christians and as evangelists to do our utmost to alleviate human need.",
+                "15. We beseech the Body of Christ to join with us in prayer and work for peace in our world, for revival and a renewed dedication to the biblical priority of evangelism in the church, and for the oneness of believers in Christ for the fulfillment of the Great Commission, until Christ returns."
+            ];
+            let index = 0;
+            let interValid;
+            const paragraph = document.getElementById("autoText");
+
+            function showMessage() {
+                paragraph.textContent = messages[index];
+                index = (index + 1) % messages.length; // Loop back
+            }
+            function startRotation() {
+                interValid = setInterval(showMessage, 10000); // Change message every 5 seconds
+            }
+            function stopRotation() {
+                clearInterval(interValid);
+            }
+            // Start the message rotation
+            showMessage();
+            startRotation();
+            // Pause on hover, resume on mouse out
+            paragraph.addEventListener("mouseover", stopRotation);
+            paragraph.addEventListener("mouseout", startRotation);
