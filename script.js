@@ -111,7 +111,7 @@ support@churchofchristmakurdi.com
             });
             
             // About Us Image Slideshow
-            const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", "src/images/WEBUPDATE/children.jpg"];
+            const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", "src/images/WEBUPDATE/children.jpg", ];
             let index = 0;
 
             function changeImage(){
@@ -331,3 +331,16 @@ support@churchofchristmakurdi.com
             // Pause on hover, resume on mouse out
             paragraph.addEventListener("mouseover", stopRotation);
             paragraph.addEventListener("mouseout", startRotation);
+
+    // Function to toggle sermon content visibility
+    function toggleSermon(contentId, button) {
+    const content = document.getElementById(contentId);
+
+    if (content.style.display === "none") {
+    content.style.display = "block";
+    button.innerText = "Show Less";
+    } else {
+    content.style.display = "none";
+    button.innerText = "Show More";
+    }
+}
