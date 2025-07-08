@@ -111,7 +111,14 @@ support@churchofchristmakurdi.com
             });
             
             // About Us Image Slideshow
-            const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", "src/images/WEBUPDATE/children.jpg", ];
+            const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", 
+                "src/images/WEBUPDATE/children.jpg","src/images/to_use/2.JPG","src/images/to_use/3.JPG", 
+                "src/images/to_use/all.JPG", "src/images/to_use/Ase.JPG", "src/images/to_use/bassey.JPG", 
+                "src/images/to_use/commit.jpg", "src/images/to_use/commit2.jpg", "src/images/to_use/congre.jpg", "src/images/to_use/udofot.JPG", 
+                "src/images/to_use/deacon.jpg", "src/images/to_use/ejimadu.JPG", "src/images/to_use/elder.jpg",  
+                "src/images/to_use/lead.JPG", "src/images/to_use/leader3.jpg", "src/images/to_use/leaders.JPG", "src/images/to_use/men.jpg", "src/images/to_use/min.JPG", "src/images/to_use/min2.JPG", 
+                "src/images/to_use/oche.JPG", "src/images/to_use/onah.JPG", "src/images/to_use/ord.JPG", 
+                "src/images/to_use/udofot.JPG", "src/images/to_use/papa.JPG","src/images/to_use/all2.JPG"];
             let index = 0;
 
             function changeImage(){
