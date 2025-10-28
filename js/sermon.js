@@ -32,7 +32,7 @@ class Sermon {
         card.className = 'sermon-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300';
         // Image area - smaller height
         const imgWrap = document.createElement('div');
-        imgWrap.className = 'relative h-24';
+        imgWrap.className = 'relative h-21';
         const img = document.createElement('img');
         img.src = this.thumbnailUrl || '/src/images/logo.jpg';
         img.alt = this.title;
@@ -120,7 +120,7 @@ class Sermon {
 class SermonManager {
     constructor() {
         this.sermons = [];
-        this.initialLimit = 6;
+        this.initialLimit = 4;
         this.showingAll = false;
     }
 
@@ -238,13 +238,49 @@ document.addEventListener('DOMContentLoaded', () => {
         //     pdfUrl: ""
         // },
         {
+            title: "BIBLICAL FOUNDATION OF DISCIPLESHIP",
+            preacher: "BRO. DR. SUNDAY U. ONAH (SHEPHERD)",
+            date: "2025-10-12",
+            duration: 45,
+            description: "The True Discipleship Transformation, Reformation And Restoration Is Not Merely About Church Attendance, Ritual Worship Services, Fellowship, Friendship,  Relationship,  Companionship,  Partnership,  Workmanship  Or  Titles In  The  Local  Church.  But,  It  Is  A  Practical,  Radical,  Critical,  Crucial  Worship Services, Fellowship, Friendship, Relationship, Companionship, Partnership,Workmanship And Call Of Jesus In Matt. 5:13-16; Matt. 16:24-26 To Be A True Disciple Of Him, By Influencing Our Communities Or Localities With The Soul-Saving  Or  Soul-Searching  Gospel  Of  Our  Lord  Jesus  Christ  In  Fulfilling  The Great Mission And Commission In Matt. 28:18-20; Acts 1:4-8.",
+            thumbnailUrl: "/src/Documents/oct,25/BIBLICAL FOUNDATION OF DISCIPLESHIP.jpg",
+            pdfUrl: "/src/Documents/oct,25/BIBLICAL FOUNDATION OF DISCIPLESHIP.pdf"
+        },
+        {
+            title: "CHRISTIAN WILDERNESS WANDERING INTO THE PROMISED LAND",
+            preacher: "BRO. ICHA INNOCENT (Minister)",
+            date: "2025-10-19",
+            duration: 40,
+            description: "",
+            thumbnailUrl: "/src/Documents/oct,25/CHRISTIAN WILDERNESS WANDERING INTO THE PROMISED.jpg",
+            pdfUrl: "/src/Documents/oct,25/CHRISTIAN WILDERNESS WANDERING INTO THE PROMISED LAND.pdf"
+        },
+        {
+            title: "TAKE HEED HOW YOU BUILD ON THE FOUNDATION",
+            preacher: "BRO. ISAIAH A. ADIKWU (EVANGELIST)",
+            date: "2025-10-19",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "/src/Documents/oct,25/TAKE HEED HOW YOU BUILD ON THE FOUNDATION.jpg",
+            pdfUrl: "/src/Documents/oct,25/TAKE HEED HOW YOU BUILD ON THE FOUNDATION.pdf"
+        },
+         {
+            title: "THE PECULIAR PEOPLE OF GOD",
+            preacher: "BRO. ICHA INNOCENT (Minister)",
+            date: "2025-10-12",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "/src/Documents/oct,25/THE PECULIAR PEOPLE OF GOD.jpg",
+            pdfUrl: "/src/Documents/oct,25/THE PECULIAR PEOPLE OF GOD.pdf"
+        },
+        {
             title: "WHO ARE YOU?",
             preacher: "BRO. ICHA INNOCENT (Minister)",
             date: "2025-10-05",
             duration: 30,
             description: "",
-            thumbnailUrl: "/src/Documents/oct, 2025/5th sermon.jpg",
-            pdfUrl: "/src/Documents/oct, 2025/WHO ARE YOU?.pdf"
+            thumbnailUrl: "/src/Documents/oct,25/WHO ARE YOU.jpg",
+            pdfUrl: "/src/Documents/oct,25/WHO ARE YOU.pdf"
         },
         {
             title: "THE ACTIVITIES OF WIDOWS IN THE OLD AND NEW TESTAMENTS OF THE BIBLE",
@@ -252,8 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025-10-05",
             duration: 40,
             description: "",
-            thumbnailUrl: "/src/Documents/oct,2025/THE_ACTIVITIES_OF_WIDOWS.jpg",
-            pdfUrl: "/src/Documents/oct,2025/THE_ACTIVITIES_OF_WIDOWS.pdf"
+            thumbnailUrl: "/src/Documents/oct,25/THE_ACTIVITIES_OF_WIDOWS.jpg",
+            pdfUrl: "/src/Documents/oct,25/THE_ACTIVITIES_OF_WIDOWS.pdf"
         },
         {
             title: "THE PRACTICAL NEW TESTAMENT WISDOM AND INTEGRITY IN THE FACE OF FOOLISHNESS",
