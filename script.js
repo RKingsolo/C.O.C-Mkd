@@ -339,15 +339,3 @@ support@churchofchristmakurdi.com
             paragraph.addEventListener("mouseover", stopRotation);
             paragraph.addEventListener("mouseout", startRotation);
 
-    // Function to toggle sermon content visibility
-    function toggleSermon(contentId, button) {
-    const content = document.getElementById(contentId);
-
-    if (content.style.display === "none") {
-    content.style.display = "block";
-    button.innerText = "Show Less";
-    } else {
-    content.style.display = "none";
-    button.innerText = "Show More";
-    }
-}
