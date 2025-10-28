@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 40,
             description: "",
             thumbnailUrl: "/src/Documents/oct,2025/THE_ACTIVITIES_OF_WIDOWS.jpg",
-            pdfUrl: "/src/Documents/oct,2025/THE_ACTIVITIES_OF_WIDOWS_IN_THE_BIBLE.pdf"
+            pdfUrl: "/src/Documents/oct,2025/THE_ACTIVITIES_OF_WIDOWS.pdf"
         },
         {
             title: "THE PRACTICAL NEW TESTAMENT WISDOM AND INTEGRITY IN THE FACE OF FOOLISHNESS",
