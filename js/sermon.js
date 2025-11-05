@@ -66,21 +66,67 @@ class Sermon {
         // Description area (collapsible)
         const contentDiv = document.createElement('div');
         contentDiv.className = 'sermon-content transition-all duration-300 overflow-hidden text-sm text-gray-700 mb-2';
-        contentDiv.style.maxHeight = '3em';
-        contentDiv.innerHTML = `<p class="mb-0">${this.description}</p>`;
+
+        // inner wrapper holds the actual text so measurements are consistent
+        const contentInner = document.createElement('div');
+        contentInner.innerHTML = `<p class="mb-0">${this.description}</p>`;
+        contentDiv.appendChild(contentInner);
 
         const toggleBtn = document.createElement('button');
         toggleBtn.className = 'text-blue-600 hover:text-blue-800 text-xs mb-2';
         toggleBtn.type = 'button';
+        toggleBtn.setAttribute('aria-expanded', 'false');
         toggleBtn.textContent = 'Show More';
 
-        toggleBtn.addEventListener('click', () => {
-            if (contentDiv.style.maxHeight && contentDiv.style.maxHeight !== '2em') {
-                contentDiv.style.maxHeight = '1.5em';
-                toggleBtn.textContent = 'Show More';
+        // We'll compute the collapsed height when the card is inserted into the DOM.
+        // Attach an initializer function to the card so the manager can call it after appendChild.
+        card._initToggle = function() {
+            // number of lines to show when collapsed
+            const lines = 2;
+            // compute line-height from the first paragraph
+            const p = contentInner.querySelector('p');
+            const cs = window.getComputedStyle(p);
+            const lineHeight = parseFloat(cs.lineHeight) || parseFloat(window.getComputedStyle(contentInner).fontSize) * 1.2;
+            const collapsedHeight = Math.ceil(lineHeight * lines);
+
+            // ensure natural height is measurable by forcing auto height briefly
+            contentDiv.style.maxHeight = 'none';
+            const fullHeight = contentDiv.scrollHeight;
+
+            if (fullHeight <= collapsedHeight + 4) {
+                // content fits in collapsed area — no toggle needed
+                toggleBtn.style.display = 'none';
+                contentDiv.style.maxHeight = 'none';
+                contentDiv.classList.remove('overflow-hidden');
+                toggleBtn.setAttribute('aria-hidden', 'true');
             } else {
+                // set collapsed height and show toggle
+                contentDiv.style.maxHeight = `${collapsedHeight}px`;
+                toggleBtn.style.display = '';
+                toggleBtn.setAttribute('aria-hidden', 'false');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        };
+
+        let isExpanded = false;
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                // expand to full height (use scrollHeight so it animates)
                 contentDiv.style.maxHeight = contentDiv.scrollHeight + 'px';
                 toggleBtn.textContent = 'Show Less';
+                toggleBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                // collapse back to the computed collapsed height
+                // recompute collapsed height in case responsive change occurred
+                const p = contentInner.querySelector('p');
+                const cs = window.getComputedStyle(p);
+                const lineHeight = parseFloat(cs.lineHeight) || parseFloat(window.getComputedStyle(contentInner).fontSize) * 1.2;
+                const collapsedHeight = Math.ceil(lineHeight * 3);
+                contentDiv.style.maxHeight = `${collapsedHeight}px`;
+                toggleBtn.textContent = 'Show More';
+                toggleBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
@@ -143,6 +189,10 @@ class SermonManager {
         toShow.forEach(s => {
             const card = s.createSermonCard();
             container.appendChild(card);
+            // initialize toggle after the card is in the DOM so measurements (scrollHeight) work
+            if (typeof card._initToggle === 'function') {
+                try { card._initToggle(); } catch (e) { /* ignore init errors */ }
+            }
         });
 
         // remove any existing injected view-all container
@@ -170,7 +220,13 @@ class SermonManager {
         const container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = '';
-        list.forEach(s => container.appendChild(s.createSermonCard()));
+        list.forEach(s => {
+            const c = s.createSermonCard();
+            container.appendChild(c);
+            if (typeof c._initToggle === 'function') {
+                try { c._initToggle(); } catch (e) { /* ignore */ }
+            }
+        });
         // remove any existing injected view-all container
         const existing = document.getElementById('view-all-sermons-container');
         if (existing) existing.remove();
@@ -461,4 +517,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 150);
         });
     }
+
+        // Recompute collapsed heights on window resize (debounced)
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                // For each rendered card, re-run its init function only if it's currently collapsed
+                document.querySelectorAll('.sermon-card').forEach(card => {
+                    try {
+                        const toggle = card.querySelector('button[aria-expanded]');
+                        if (toggle && toggle.getAttribute('aria-expanded') === 'false' && typeof card._initToggle === 'function') {
+                            card._initToggle();
+                        }
+                    } catch (e) { /* ignore */ }
+                });
+            }, 150);
+        });
 });

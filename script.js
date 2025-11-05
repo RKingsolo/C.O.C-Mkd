@@ -77,38 +77,95 @@ support@churchofchristmakurdi.com
                 mobileMenu.classList.toggle('hidden');
             });
             
-            // Page navigation
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageContents = document.querySelectorAll('.page-content');
-            
+            // Page navigation (hash-based) ------------------------------------------------
+            // Behavior:
+            // - Clicking a nav link sets location.hash = #pagename
+            // - The hashchange event drives the UI update so back/forward works
+            // - document.title is updated based on a data-title attribute or link text
+            const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+            const pageContents = Array.from(document.querySelectorAll('.page-content'));
+
+            function getPageFromHash() {
+                return (location.hash && location.hash.startsWith('#')) ? location.hash.slice(1) : null;
+            }
+
+            function updateDocumentTitle(pageName) {
+                if (!pageName) return;
+                // Find a matching nav link to derive a friendly title
+                const link = navLinks.find(l => l.getAttribute('data-page') === pageName);
+                const titlePart = (link && (link.getAttribute('data-title') || link.textContent.trim())) || pageName;
+                document.title = `${titlePart} — Church of Christ Makurdi`;
+            }
+
+            function showPage(pageName) {
+                if (!pageName) return;
+                // Deactivate all nav links
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+                // Activate the matching nav link (if any)
+                const activeLink = navLinks.find(l => l.getAttribute('data-page') === pageName);
+                if (activeLink) activeLink.classList.add('active');
+
+                // Hide all page contents then show the target
+                pageContents.forEach(content => content.classList.add('hidden'));
+                const pageId = `${pageName}-page`;
+                const el = document.getElementById(pageId);
+                if (el) el.classList.remove('hidden');
+
+                // Close mobile menu if open and scroll to top
+                if (mobileMenu) mobileMenu.classList.add('hidden');
+                window.scrollTo(0, 0);
+
+                // Update title
+                updateDocumentTitle(pageName);
+            }
+
+            // Click handlers set the hash; the hashchange handler will call showPage
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // Remove active class from all links
-                    navLinks.forEach(navLink => {
-                        navLink.classList.remove('active');
-                    });
-                    
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Hide all page contents
-                    pageContents.forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    
-                    // Show the selected page content
-                    const pageId = this.getAttribute('data-page') + '-page';
-                    document.getElementById(pageId).classList.remove('hidden');
-                    
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                    
-                    // Scroll to top
-                    window.scrollTo(0, 0);
+                    const page = this.getAttribute('data-page');
+                    if (!page) return;
+                    // Setting the hash pushes a new history state and triggers hashchange
+                    location.hash = `#${page}`;
                 });
             });
+
+            // Handle back/forward and direct links to hash
+            window.addEventListener('hashchange', () => {
+                const page = getPageFromHash();
+                if (!page) return;
+                // admin routes use the prefix 'admin-<section>' (e.g. #admin-overview)
+                if (page.startsWith('admin-')) {
+                    const section = page.slice('admin-'.length);
+                    showAdminSection(section);
+                } else {
+                    showPage(page);
+                }
+            });
+
+            // Initial navigation: prefer hash if present, else existing .active link
+            (function initialNavigation() {
+                const initialHash = getPageFromHash();
+                if (initialHash) {
+                        if (initialHash.startsWith('admin-')) {
+                            const section = initialHash.slice('admin-'.length);
+                            // Defer admin routing until admin nav elements are initialized
+                            setTimeout(() => { showAdminSection(section); }, 0);
+                        } else {
+                        showPage(initialHash);
+                    }
+                } else {
+                    // fallback to the pre-marked active link in markup
+                    const pre = document.querySelector('.nav-link.active');
+                    if (pre && pre.getAttribute('data-page')) {
+                        const page = pre.getAttribute('data-page');
+                        // update the URL (replaceState to avoid duplicate history entry)
+                        history.replaceState(null, '', `#${page}`);
+                        showPage(page);
+                    }
+                }
+            })();
             
             // About Us Image Slideshow
             const images = ["src/images/WEBUPDATE/women.jpg", "src/images/WEBUPDATE/Youth.jpg", 
@@ -137,8 +194,7 @@ support@churchofchristmakurdi.com
 
             
 
-            // Set home page as active by default
-            document.querySelector('.nav-link.active').click();
+            // Initial navigation handled above (hash-based). No manual click needed here.
 
                       
             
@@ -185,39 +241,54 @@ support@churchofchristmakurdi.com
                     frontendView.classList.add('hidden');
                     adminDashboard.classList.remove('hidden');
                     
-                    // Set overview as active
-                    document.querySelector('.admin-nav-link.active').click();
+                    // Set overview as active by navigating to the admin hash route
+                    const defaultAdminLink = document.querySelector('.admin-nav-link.active') || document.querySelector('.admin-nav-link[data-section]');
+                    if (defaultAdminLink) {
+                        const section = defaultAdminLink.getAttribute('data-section');
+                        if (section) location.hash = `#admin-${section}`;
+                    }
                 } else {
                     loginError.textContent = 'Invalid username or password';
                     loginError.classList.remove('hidden');
                 }
             });
             
-            // Admin dashboard navigation
-            const adminNavLinks = document.querySelectorAll('.admin-nav-link');
-            const adminSections = document.querySelectorAll('.admin-section');
-            
+            // Admin dashboard navigation (hash-based)
+            const adminNavLinks = Array.from(document.querySelectorAll('.admin-nav-link'));
+            const adminSections = Array.from(document.querySelectorAll('.admin-section'));
+
+            function showAdminSection(sectionName) {
+                if (!sectionName) return;
+                // Ensure admin dashboard is visible
+                if (frontendView) frontendView.classList.add('hidden');
+                if (adminDashboard) adminDashboard.classList.remove('hidden');
+
+                // Deactivate all admin nav links
+                adminNavLinks.forEach(l => l.classList.remove('active'));
+
+                // Activate the matching admin nav link
+                const link = adminNavLinks.find(l => l.getAttribute('data-section') === sectionName);
+                if (link) link.classList.add('active');
+
+                // Hide all admin sections and show the requested one
+                adminSections.forEach(s => s.classList.add('hidden'));
+                const id = `${sectionName}-section`;
+                const secEl = document.getElementById(id);
+                if (secEl) secEl.classList.remove('hidden');
+
+                // Update document title for admin section
+                const titlePart = (link && (link.getAttribute('data-title') || link.textContent.trim())) || sectionName;
+                document.title = `${titlePart} — Admin — Church of Christ Makurdi`;
+            }
+
+            // Clicking an admin nav link sets the hash (hashchange will handle display)
             adminNavLinks.forEach(link => {
                 if (link.id !== 'logout-btn') {
                     link.addEventListener('click', function(e) {
                         e.preventDefault();
-                        
-                        // Remove active class from all links
-                        adminNavLinks.forEach(navLink => {
-                            navLink.classList.remove('active');
-                        });
-                        
-                        // Add active class to clicked link
-                        this.classList.add('active');
-                        
-                        // Hide all admin sections
-                        adminSections.forEach(section => {
-                            section.classList.add('hidden');
-                        });
-                        
-                        // Show the selected section
-                        const sectionId = this.getAttribute('data-section') + '-section';
-                        document.getElementById(sectionId).classList.remove('hidden');
+                        const section = this.getAttribute('data-section');
+                        if (!section) return;
+                        location.hash = `#admin-${section}`;
                     });
                 }
             });
@@ -234,6 +305,14 @@ support@churchofchristmakurdi.com
                 document.getElementById('admin-username').value = '';
                 document.getElementById('admin-password').value = '';
                 loginError.classList.add('hidden');
+                // Navigate back to the default frontend page (use first nav-link with data-page)
+                const defaultFront = document.querySelector('.nav-link[data-page]');
+                if (defaultFront && defaultFront.getAttribute('data-page')) {
+                    location.hash = `#${defaultFront.getAttribute('data-page')}`;
+                } else {
+                    // fallback
+                    location.hash = '#home';
+                }
             });
             
             // Registration required toggle for events
