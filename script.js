@@ -327,7 +327,7 @@ support@churchofchristmakurdi.com
                 index = (index + 1) % messages.length; // Loop back
             }
             function startRotation() {
-                interValid = setInterval(showMessage, 10000); // Change message every 9 seconds
+                interValid = setInterval(showMessage, 9000); // Change message every 9 seconds
             }
             function stopRotation() {
                 clearInterval(interValid);

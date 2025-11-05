@@ -75,7 +75,7 @@ class Sermon {
         toggleBtn.textContent = 'Show More';
 
         toggleBtn.addEventListener('click', () => {
-            if (contentDiv.style.maxHeight && contentDiv.style.maxHeight !== '3em') {
+            if (contentDiv.style.maxHeight && contentDiv.style.maxHeight !== '2em') {
                 contentDiv.style.maxHeight = '1.5em';
                 toggleBtn.textContent = 'Show More';
             } else {
@@ -228,15 +228,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Default seed data (used when no static DOM cards are present)
     const defaultSermonsData = [
-        // {
-        //     title: "",
-        //     preacher: "",
-        //     date: "",
-        //     duration: ,
-        //     description: "",
-        //     thumbnailUrl: "",
-        //     pdfUrl: ""
-        // },
+        {
+            title: "SUNDAY IS COMING",
+            preacher: "BRO. STEPHEN TALI",
+            date: "2025-09-28",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "src/Documents/sept, 2025/28th Sept,2025/sermon/SUNDAY IS COMING.jpg",
+            pdfUrl: "src/Documents/sept, 2025/28th Sept,2025/sermon/SUNDAY IS COMING.pdf"
+        },
+        {
+            title: "PATIENCE AND ENDURANCE",
+            preacher: "BRO. ICHA INNOCENT (Minister)",
+            date: "2025-09-21",
+            duration: 40,
+            description: "",
+            thumbnailUrl: "/src/Documents/sept, 2025/21st Sept,2025/PATIENCE AND ENDURANCE.jpg",
+            pdfUrl: "src/Documents/sept, 2025/21st Sept,2025/PATIENCE AND ENDURANCE.pdf"
+        },
+        {
+            title: "FELLOWSHIP TO FRIENDSHIP",
+            preacher: "BRO. LEVI UGECHI",
+            date: "2025-09-21",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "src/Documents/sept, 2025/21st Sept,2025/sermon/FROM FELLOWSHIP TO FRIENDSHIP.jpg",
+            pdfUrl: "src/Documents/sept, 2025/21st Sept,2025/sermon/FROM FELLOWSHIP TO FRIENDSHIP.pdf"
+        },
+        {
+            title: "FAITH  VERSES  FEAR",
+            preacher: "BRO. DR. SUNDAY U. ONAH (SHEPHERD)",
+            date: "2025-09-14",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "src/Documents/sept, 2025/14th Sept,2025/SERMON/FAITH VERSES FEAR.jpg",
+            pdfUrl: "src/Documents/sept, 2025/14th Sept,2025/SERMON/FAITH  VERSES  FEAR.pdf"
+        },
+        {
+            title: "PRIDE AGAINST CALMNESS",
+            preacher: "BRO. ISAIAH ADIKWU (EVANGELIST)",
+            date: "2025-09-14",
+            duration: 40,
+            description: "",
+            thumbnailUrl: "src/Documents/sept, 2025/14th Sept,2025/PRIDE AGAINST CALMNESS.jpg",
+            pdfUrl: "src/Documents/sept, 2025/14th Sept,2025/PRIDE AGAINST CALMNESS.pdf"
+        },
+        {
+            title: "SEVEN THINGS THAT CAN BUILD OR EDIFY OUR FAITH IN CHRIST JESUS",
+            preacher: "BRO. DR. SUNDAY U. ONAH (SHEPHERD)",
+            date: "2025-09-07",
+            duration: 30,
+            description: "",
+            thumbnailUrl: "src/Documents/sept, 2025/7th Sept,2025/sermon/SEVEN THINGS THAT CAN BUILD OR EDIFY OUR FAITH IN CHRIST JESUS.jpg",
+            pdfUrl: "src/Documents/sept, 2025/7th Sept,2025/sermon/SEVEN THINGS THAT CAN BUILD OR EDIFY OUR FAITH IN CHRIST JESUS.pdf"
+        },
+        {
+            title: "FAVORITISM IN THE FACE OF GENEROSITY",
+            preacher: "BRO. ISAIAH ADIKWU (EVANGELIST)",
+            date: "2025-09-07",
+            duration: 40,
+            description: "",
+            thumbnailUrl: "/src/Documents/sept, 2025/7th Sept,2025/FAVORITISM IN THE FACE OF GENEROSITY.jpg",
+            pdfUrl: "/src/Documents/sept, 2025/7th Sept,2025/FAVORITISM IN THE FACE OF GENEROSITY.pdf"
+        },
         {
             title: "BIBLICAL FOUNDATION OF DISCIPLESHIP",
             preacher: "BRO. DR. SUNDAY U. ONAH (SHEPHERD)",
