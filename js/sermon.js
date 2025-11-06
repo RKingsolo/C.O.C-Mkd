@@ -199,18 +199,33 @@ class SermonManager {
         const existing = document.getElementById('view-all-sermons-container');
         if (existing) existing.remove();
 
-        if (!this.showingAll && sorted.length > this.initialLimit) {
+        // If there are more sermons than the initial limit, show a toggle button
+        if (sorted.length > this.initialLimit) {
             const viewAllWrap = document.createElement('div');
             viewAllWrap.id = 'view-all-sermons-container';
             viewAllWrap.className = 'text-center mt-6';
             const button = document.createElement('button');
             button.id = 'view-all-sermons';
             button.className = 'bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg transition inline-flex items-center text-sm';
-            button.innerHTML = `<i class="fas fa-list mr-2"></i> View All Sermons (${sorted.length - this.initialLimit} more)`;
+
+            const remaining = Math.max(0, sorted.length - this.initialLimit);
+            if (this.showingAll) {
+                button.innerHTML = `<i class="fas fa-compress mr-2"></i> View Less`;
+            } else {
+                button.innerHTML = `<i class="fas fa-list mr-2"></i> View All Sermons (${remaining} more)`;
+            }
+
             button.addEventListener('click', () => {
-                this.showingAll = true;
+                // toggle between showing all and restoring to initialLimit
+                this.showingAll = !this.showingAll;
                 this.renderSermons(containerId);
+                // if collapsing, scroll back to the container to keep context
+                if (!this.showingAll) {
+                    const parent = document.getElementById(containerId);
+                    if (parent) parent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
+
             viewAllWrap.appendChild(button);
             container.parentNode.insertBefore(viewAllWrap, container.nextSibling);
         }
@@ -361,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
             preacher: "BRO. ICHA INNOCENT (Minister)",
             date: "2025-10-19",
             duration: 40,
-            description: "",
+            description: "If our  faith  is  being  put  to  test;  how  many  of  us  are  going  to  remain faithful to the end? Rev.2:10.",
             thumbnailUrl: "/src/Documents/oct,25/CHRISTIAN WILDERNESS WANDERING INTO THE PROMISED.jpg",
             pdfUrl: "/src/Documents/oct,25/CHRISTIAN WILDERNESS WANDERING INTO THE PROMISED LAND.pdf"
         },
@@ -370,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             preacher: "BRO. ISAIAH A. ADIKWU (EVANGELIST)",
             date: "2025-10-19",
             duration: 30,
-            description: "",
+            description: "Every solid project in life, be it spiritual or physical, a career or a building, all need a solid foundation that is unshakable. So  is  the  church  and  the  families.    The  quality  of  our  building materials matter a great deal.",
             thumbnailUrl: "/src/Documents/oct,25/TAKE HEED HOW YOU BUILD ON THE FOUNDATION.jpg",
             pdfUrl: "/src/Documents/oct,25/TAKE HEED HOW YOU BUILD ON THE FOUNDATION.pdf"
         },
@@ -379,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
             preacher: "BRO. ICHA INNOCENT (Minister)",
             date: "2025-10-12",
             duration: 30,
-            description: "",
+            description: "As God's royal family, we have a responsibility to live according to the royal law, demonstrating love, compassion, and kindness to  others.  Let  us  strive  to  keep  the  dignity  of  our  royal  status, showing forth God's praises in all we do.",
             thumbnailUrl: "/src/Documents/oct,25/THE PECULIAR PEOPLE OF GOD.jpg",
             pdfUrl: "/src/Documents/oct,25/THE PECULIAR PEOPLE OF GOD.pdf"
         },
