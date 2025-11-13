@@ -66,3 +66,32 @@
             line-height: 1.6;
             color: #1e3a8a; Tailwind's blue-900 */
         }
+
+/* Navigation link hover/focus styles (applies to .nav-link used across the site) */
+.nav-link {
+    color: inherit; /* inherit current color (usually white on nav) */
+    text-decoration: none;
+    padding: 0.15rem 0.35rem; /* small hit area without changing layout */
+    border-radius: 0.375rem; /* match Tailwind rounded-md */
+    transition: color 180ms ease, background-color 180ms ease, transform 120ms ease;
+    display: inline-block;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #FBBF24 !important; /* Tailwind "yellow-400" (visible on blue-900) */
+    background-color: rgba(255,255,255,0.04); /* subtle highlight */
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Mobile menu block links should remain full-width but still get the hover effect */
+#mobile-menu .nav-link:hover,
+#mobile-menu .nav-link:focus {
+    background-color: rgba(255,255,255,0.06);
+}
+
+/* Small accessibility focus ring for keyboard users */
+.nav-link:focus-visible {
+    box-shadow: 0 0 0 3px rgba(255, 191, 36, 0.18);
+}

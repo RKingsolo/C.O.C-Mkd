@@ -1,81 +1,13 @@
-// Website Manual Document (would typically be a separate text file)
-        const websiteManual = `Church of Christ Makurdi - Website Admin Manual
-
-1. Introduction
-Welcome to your church website admin panel. This manual will guide you through the process of managing and updating your church website.
-
-2. Getting Started
-- To access the admin area, click the "Admin Login" button in the footer (visible only to logged-in admins)
-- Use the credentials provided to you by the website administrator
-- After login, you'll see the admin dashboard with various sections
-
-3. Managing Website Content
-3.1 Pages
-- Navigate to "Manage Pages" in the sidebar
-- Select the page you want to edit from the list
-- Make your changes in the editor
-- Click "Save Changes" when done
-
-3.2 Sermons
-- To add a new sermon, click "Add New Sermon"
-- Fill in all required details (title, preacher, date, etc.)
-- Upload audio file (MP3 format recommended)
-- Optionally upload sermon notes (PDF) and a thumbnail image
-- Click "Save Sermon"
-
-3.3 Events
-- To add an event, click "Add New Event"
-- Fill in event details including date, time, location, and description
-- Upload a featured image if available
-- Set registration options if needed
-- Save when complete
-
-4. Media Library
-- Upload all images, audio files, documents here
-- Organize files into categories for easy management
-- Replace files by uploading new versions with the same name
-
-5. User Management
-- Add new users and assign appropriate roles
-- Administrators have full access
-- Editors can manage content but not settings
-- Authors can only add/edit their own content
-
-6. Website Settings
-6.1 General Settings
-- Edit church name, address, contact info
-- Update logos and favicon
-- Modify service times
-
-6.2 Other Settings
-- Newsletter settings
-- Social media links
-- Analytics tracking
-
-7. Best Practices
-- Always preview changes before saving
-- Keep content updated regularly
-- Back up important data
-- Use strong passwords for admin accounts
-
-8. Troubleshooting
-- If you can't log in, use the password reset option
-- For technical issues, contact your web developer
-- Clear your browser cache if you see outdated content
-
-For additional support, please contact:
-support@churchofchristmakurdi.com
-+234 123 456 7890`;
-
-        // JavaScript for the website functionality
-        document.addEventListener('DOMContentLoaded', function() {
+// JavaScript for the website functionality
+document.addEventListener('DOMContentLoaded', function() {
             // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
             
             // Page navigation (hash-based) ------------------------------------------------
             // Behavior:
@@ -176,16 +108,17 @@ support@churchofchristmakurdi.com
                 "src/images/to_use/lead.JPG", "src/images/to_use/leader3.jpg", "src/images/to_use/leaders.JPG", "src/images/to_use/men.jpg", "src/images/to_use/min.JPG", "src/images/to_use/min2.JPG", 
                 "src/images/to_use/oche.JPG", "src/images/to_use/onah.JPG", "src/images/to_use/ord.JPG", 
                 "src/images/to_use/udofot.JPG", "src/images/to_use/papa.JPG","src/images/to_use/all2.JPG"];
-            let index = 0;
+            let slideIndex = 0;
 
             function changeImage(){
                 const img = document.getElementById("slideshow");
+                if (!img || images.length === 0) return;
                 img.classList.remove("opacity-100");
                 img.classList.add("opacity-0");
 
                 setTimeout(() => {
-                    index = (index + 1) % images.length;
-                    img.src = images[index];
+                    slideIndex = (slideIndex + 1) % images.length;
+                    img.src = images[slideIndex];
                     img.classList.remove("opacity-0");
                     img.classList.add("opacity-100");
                 }, 300);
@@ -198,7 +131,7 @@ support@churchofchristmakurdi.com
 
                       
             
-            // Admin login functionality
+            // Admin login functionality (guarded — only run if elements exist on the page)
             const adminLoginBtn = document.getElementById('admin-login-btn');
             const adminLoginModal = document.getElementById('admin-login-modal');
             const closeModal = document.querySelector('.close-modal');
@@ -206,52 +139,58 @@ support@churchofchristmakurdi.com
             const loginError = document.getElementById('login-error');
             const frontendView = document.getElementById('frontend-view');
             const adminDashboard = document.getElementById('admin-dashboard');
-            
-            // Show admin login button (for demo purposes - would be hidden in production)
-            document.getElementById('admin-login-section').classList.remove('hidden');
-            
-            adminLoginBtn.addEventListener('click', function() {
-                adminLoginModal.style.display = 'block';
-            });
-            
-            closeModal.addEventListener('click', function() {
-                adminLoginModal.style.display = 'none';
-            });
-            
-            window.addEventListener('click', function(event) {
-                if (event.target === adminLoginModal) {
+
+            const adminLoginSection = document.getElementById('admin-login-section');
+            if (adminLoginSection) adminLoginSection.classList.remove('hidden');
+
+            if (adminLoginBtn && adminLoginModal) {
+                adminLoginBtn.addEventListener('click', function() {
+                    adminLoginModal.style.display = 'block';
+                });
+            }
+
+            if (closeModal && adminLoginModal) {
+                closeModal.addEventListener('click', function() {
                     adminLoginModal.style.display = 'none';
-                }
-            });
-            
-            // Simple admin login for demo purposes
-            // In a real application, this would be handled by a server with proper authentication
-            loginForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const username = document.getElementById('admin-username').value;
-                const password = document.getElementById('admin-password').value;
-                
-                // Demo credentials
-                if (username === 'admin' && password === 'password123') {
-                    loginError.classList.add('hidden');
-                    adminLoginModal.style.display = 'none';
-                    
-                    // Hide frontend and show admin dashboard
-                    frontendView.classList.add('hidden');
-                    adminDashboard.classList.remove('hidden');
-                    
-                    // Set overview as active by navigating to the admin hash route
-                    const defaultAdminLink = document.querySelector('.admin-nav-link.active') || document.querySelector('.admin-nav-link[data-section]');
-                    if (defaultAdminLink) {
-                        const section = defaultAdminLink.getAttribute('data-section');
-                        if (section) location.hash = `#admin-${section}`;
+                });
+            }
+
+            if (adminLoginModal) {
+                window.addEventListener('click', function(event) {
+                    if (event.target === adminLoginModal) {
+                        adminLoginModal.style.display = 'none';
                     }
-                } else {
-                    loginError.textContent = 'Invalid username or password';
-                    loginError.classList.remove('hidden');
-                }
-            });
+                });
+            }
+
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const usernameEl = document.getElementById('admin-username');
+                    const passwordEl = document.getElementById('admin-password');
+                    const username = usernameEl ? usernameEl.value : '';
+                    const password = passwordEl ? passwordEl.value : '';
+
+                    // Demo credentials (for local/demo only)
+                    if (username === 'admin' && password === 'password123') {
+                        if (loginError) loginError.classList.add('hidden');
+                        if (adminLoginModal) adminLoginModal.style.display = 'none';
+                        if (frontendView) frontendView.classList.add('hidden');
+                        if (adminDashboard) adminDashboard.classList.remove('hidden');
+
+                        const defaultAdminLink = document.querySelector('.admin-nav-link.active') || document.querySelector('.admin-nav-link[data-section]');
+                        if (defaultAdminLink) {
+                            const section = defaultAdminLink.getAttribute('data-section');
+                            if (section) location.hash = `#admin-${section}`;
+                        }
+                    } else {
+                        if (loginError) {
+                            loginError.textContent = 'Invalid username or password';
+                            loginError.classList.remove('hidden');
+                        }
+                    }
+                });
+            }
             
             // Admin dashboard navigation (hash-based)
             const adminNavLinks = Array.from(document.querySelectorAll('.admin-nav-link'));
@@ -282,45 +221,50 @@ support@churchofchristmakurdi.com
             }
 
             // Clicking an admin nav link sets the hash (hashchange will handle display)
-            adminNavLinks.forEach(link => {
-                if (link.id !== 'logout-btn') {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const section = this.getAttribute('data-section');
-                        if (!section) return;
-                        location.hash = `#admin-${section}`;
-                    });
-                }
-            });
-            
-            // Logout functionality
-            document.getElementById('logout-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Hide admin dashboard and show frontend
-                adminDashboard.classList.add('hidden');
-                frontendView.classList.remove('hidden');
-                
-                // Reset admin login form
-                document.getElementById('admin-username').value = '';
-                document.getElementById('admin-password').value = '';
-                loginError.classList.add('hidden');
-                // Navigate back to the default frontend page (use first nav-link with data-page)
-                const defaultFront = document.querySelector('.nav-link[data-page]');
-                if (defaultFront && defaultFront.getAttribute('data-page')) {
-                    location.hash = `#${defaultFront.getAttribute('data-page')}`;
-                } else {
-                    // fallback
-                    location.hash = '#home';
-                }
-            });
+            if (adminNavLinks && adminNavLinks.length) {
+                adminNavLinks.forEach(link => {
+                    if (link.id !== 'logout-btn') {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const section = this.getAttribute('data-section');
+                            if (!section) return;
+                            location.hash = `#admin-${section}`;
+                        });
+                    }
+                });
+            }
+
+            // Logout functionality (guarded)
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (adminDashboard) adminDashboard.classList.add('hidden');
+                    if (frontendView) frontendView.classList.remove('hidden');
+
+                    const adminUserEl = document.getElementById('admin-username');
+                    const adminPassEl = document.getElementById('admin-password');
+                    if (adminUserEl) adminUserEl.value = '';
+                    if (adminPassEl) adminPassEl.value = '';
+                    if (loginError) loginError.classList.add('hidden');
+
+                    const defaultFront = document.querySelector('.nav-link[data-page]');
+                    if (defaultFront && defaultFront.getAttribute('data-page')) {
+                        location.hash = `#${defaultFront.getAttribute('data-page')}`;
+                    } else {
+                        location.hash = '#home';
+                    }
+                });
+            }
             
             // Registration required toggle for events
             document.querySelectorAll('input[name="registration"]').forEach(radio => {
                 radio.addEventListener('change', function() {
                     const registrationDetails = document.getElementById('registration-details');
-                    
-                    if (document.getElementById('event-registration-yes').checked) {
+                    const yesEl = document.getElementById('event-registration-yes');
+                    if (!registrationDetails || !yesEl) return;
+
+                    if (yesEl.checked) {
                         registrationDetails.style.display = 'block';
                     } else {
                         registrationDetails.style.display = 'none';
@@ -329,15 +273,22 @@ support@churchofchristmakurdi.com
             });
             
             // File input display for sermon audio
-            document.getElementById('sermon-audio').addEventListener('change', function() {
-                const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
-                document.getElementById('file-name').textContent = fileName;
-            });
+            const sermonAudioEl = document.getElementById('sermon-audio');
+            if (sermonAudioEl) {
+                sermonAudioEl.addEventListener('change', function() {
+                    const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                    const fileNameEl = document.getElementById('file-name');
+                    if (fileNameEl) fileNameEl.textContent = fileName;
+                });
+            }
             
             // Add activity button for service times
             let activityCounter = 3;
-            document.getElementById('add-activity-btn').addEventListener('click', function() {
-                const container = document.getElementById('other-activities-container');
+            const addActivityBtn = document.getElementById('add-activity-btn');
+            const otherActivitiesContainer = document.getElementById('other-activities-container');
+            if (addActivityBtn && otherActivitiesContainer) {
+                addActivityBtn.addEventListener('click', function() {
+                    const container = otherActivitiesContainer;
                 const newActivity = document.createElement('div');
                 newActivity.className = 'grid grid-cols-1 md:grid-cols-3 gap-4 items-end';
                 newActivity.innerHTML = `
@@ -368,9 +319,10 @@ support@churchofchristmakurdi.com
                         <input type="time" id="activity-time-${activityCounter}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                 `;
-                container.appendChild(newActivity);
-                activityCounter++;
-            });
+                    container.appendChild(newActivity);
+                    activityCounter++;
+                });
+            }
             
             // You could download the manual if needed
             // console.log(websiteManual);  // This would be a downloadable text file in production
@@ -397,24 +349,28 @@ support@churchofchristmakurdi.com
                 "14. We share Christ's deep concern for the personal and social suffering of humanity, and we accept our responsibility as Christians and as evangelists to do our utmost to alleviate human need.",
                 "15. We beseech the Body of Christ to join with us in prayer and work for peace in our world, for revival and a renewed dedication to the biblical priority of evangelism in the church, and for the oneness of believers in Christ for the fulfillment of the Great Commission, until Christ returns."
             ];
-            let index = 0;
-            let interValid;
+            let msgIndex = 0;
+            let msgInterval;
             const paragraph = document.getElementById("autoText");
 
             function showMessage() {
-                paragraph.textContent = messages[index];
-                index = (index + 1) % messages.length; // Loop back
+                if (!paragraph) return;
+                paragraph.textContent = messages[msgIndex];
+                msgIndex = (msgIndex + 1) % messages.length; // Loop back
             }
             function startRotation() {
-                interValid = setInterval(showMessage, 9000); // Change message every 9 seconds
+                if (!paragraph) return;
+                msgInterval = setInterval(showMessage, 9000); // Change message every 9 seconds
             }
             function stopRotation() {
-                clearInterval(interValid);
+                clearInterval(msgInterval);
             }
-            // Start the message rotation
-            showMessage();
-            startRotation();
-            // Pause on hover, resume on mouse out
-            paragraph.addEventListener("mouseover", stopRotation);
-            paragraph.addEventListener("mouseout", startRotation);
+            // Start the message rotation if target exists
+            if (paragraph) {
+                showMessage();
+                startRotation();
+                // Pause on hover, resume on mouse out
+                paragraph.addEventListener("mouseover", stopRotation);
+                paragraph.addEventListener("mouseout", startRotation);
+            }
 
