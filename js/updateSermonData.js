@@ -3,6 +3,42 @@
 
 export const defaultSermonsData = [
    {
+        title: "THE DANGEROUS BIRDS ARE FLYING",
+        preacher: "BROTHER JOHN NOMIHO (DEACON)",
+        date: "2025-11-17",
+        duration: 30,
+        description: "<p> No matter  how  much  we  are  endowed  with  values  of  life  and blessings from above, or how long we have been in the church or how much knowledge of the Bible we have acquired, If the word and fear of God is not richly dwell and seeing in us,the  DANGEROUS  BIRDS  would  always  have  their  ways  in  our lives..</p>",
+        thumbnailUrl: "src/Documents/NOV,25/sunday/17th Nov/THE DANGEROUS.jpg",
+        pdfUrl: "src/Documents/NOV,25/sunday/17th Nov/THE DANGEROUS BIRDS ARE FLYING.pdf"
+    },
+    {
+        title: "BRETHREN, ORGANIZE YOURSELVES DECENTLY AND IN ORDERLY MANNER",
+        preacher: "BRO.  DR.  SUNDAY  U.  ONAH  (Shepherd)",
+        date: "2025-11-17",
+        duration: 40,
+        description: "<p>This  Is  To  Produce  Effective  And  Efficient Bible  Teachers, Preachers And Ministers. Also To Create, Initiate, Motivate, Persuade,  Coordinate, Encourage, Supervise, Educate, Care,  Share, Guide,  Guard,  Lead,  Protect,  Provide,  Model, Equip,  Empower,  Nourish,  Nurture  And  Mature  Potential Leaders And Members For The Work Of The Ministry In The Local Church For Continuity.</p>",
+        thumbnailUrl: "src/Documents/NOV,25/sunday/17th Nov/Organize and Manage Yourselves.jpg",
+        pdfUrl: "src/Documents/NOV,25/sunday/17th Nov/BRETHREN, ORGANIZE YOURSELVES DECENTLY AND IN ORDERLY MANNER.pdf"
+    },
+    {
+        title: "A DESIRABLE EXAMPLE FOR BELIEVERS TO EMULATE",
+        preacher: "BRO. ICHA INNOCENT (Minister)",
+        date: "2025-10-26",
+        duration: 30,
+        description: '<p>"Let  no  one  despise  you  because  you  are  young,  but  be  an example  to  the  believers  in  speech,  conduct,  love,  faith,  and purity."</p>',
+        thumbnailUrl: "src/Documents/oct,25/26TH Oct/A DESIRABLE EXAMPLE FOR BELIEVERS TO EMULATE.jpg",
+        pdfUrl: "src/Documents/oct,25/26TH Oct/A DESIRABLE EXAMPLE FOR BELIEVERS TO EMULATE.pdf"
+    },
+    {
+            title: "THE PROOF OF CHRIST JESUS IN HUMANITY",
+            preacher: "BRO.  DR.  SUNDAY  U.  ONAH  (Shepherd)",
+            date: "2025-10-26",
+            duration: 40,
+            description: "<p>Jesus  Christ  Came  To  Prove  Himself  To  Humanity  In Various And Variable Ways. Do You See Jesus Christ As A Proof In Your Life? Without The Infallible, Undoubtable And Undeniable Proofs Of Jesus Christ, Humanity Or The New Testament Christianity Is Miserable, Worthless,Emptiness,  Hopeless,  Helpless,  Useless,  Meaningless,Fruitless And Faithless.</p>",
+            thumbnailUrl: "src/Documents/oct,25/26TH Oct/THE PROOF OF CHRIST JESUS IN HUMANITY.jpg",
+            pdfUrl: "src/Documents/oct,25/26TH Oct/THE PROOFS OF CHRIST JESUS IN HUMANITY.pdf"
+     },   
+    {
         title: "REBELLION",
         preacher: "BRO. ICHA INNOCENT (Minister)",
         date: "2025-11-02",
